@@ -1,1 +1,1 @@
-![alt text](https://github.com/ICPSR/C2Metadata/blob/master/c2m-logo.jpg "Logo Title Text 1")
+![alt text](https://github.com/ICPSR/C2Metadata/blob/master/c2m-icon.png "Continuous Capture of Metadata")
