@@ -494,10 +494,45 @@
 	<#assign output = '<h2 class=\"sectionHeader\">Data Description</h2>'>
 	<#list codebook.dataDscr as dataDscr>
 		<#assign output = output + '<h3 class=\"subSectionHeader\">Variables (' + dataDscr.var?size + ')</h3>'>
+		<#list dataDscr.var as var>
+			<#assign output = output + displayVar(var)>
+		</#list>
 	</#list>
 	<#return output>
 </#function>
 
+<#function displayVar variable>
+	<#assign output = '<h4 id=\"' + variable.name + '\" class=\"variableHeader\">' + variable.name+ '</h4>'>
+	<#assign output = output + '<div class=\"indent\">'>
+	<#if variable.qstn?has_content>
+		<#list variable.qstn as question>
+			<#assign output = output + displayQstn(question)>
+		</#list>
+	</#if>	
+
+
+
+	<#assign output = output + '</div>'>
+	<#return output>
+</#function>
+
+<#function displayQstn question>
+	<#assign output = ''>
+	<#if question.qstnLit?has_content>
+		<#assign output = output + displayQstnLit(question.qstnLit)>
+	</#if>
+	<!-- now do the same for preQTxt, postQTxt, forward, backward, ivuInstr -->
+	<!-- figure out how to handle mixed content; what if there are no sub-elements...just text? -->
+	<#return output>
+</#function>
+
+<#function displayQstnLit qstnLit>
+	<#assign output = ''>
+	<#list question.qstnLit as literalQuestion>
+		<#assign output = output + '<p class=\"question\">' + literalQuestion.content + '</p>'>
+	</#list>
+	<#return output>
+</#function>
 
 <#function getCode category>
 	<#if category.catValu?has_content>
