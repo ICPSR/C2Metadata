@@ -242,157 +242,7 @@
 	${displayDataDscr(codebook)}
 
 	<#list codebook.dataDscr[0].var as variable>
-		<div class="indent">
-			<#if variable.catgry?has_content>
-				<table class="categories">				
-					
-					<!-- First we need to interate through the categories to determine what kind of elements are present -->
-					<#assign isCodeBig=false>
-					<#assign isLabelPresent=false>
-					<#assign codeAlign='center'>
-					<#assign missingPresent=false>
-					<#assign systemMissingPresent=false>
-					<#assign itemMissingPresent=false>
-					<#list variable.catgry as category>
-						<#if category.catValu?has_content && (category.catValu.content?trim?length &gt; codeMaxSize)>
-							<#assign isCodeBig=true>
-						</#if>
-						<#if category.labl?has_content>
-							<#assign isLabelPresent=true>
-						</#if>
-						<#if isCodeBig && !isLabelPresent>
-							<#assign codeAlign='left'>
-						</#if>
-						<#if category.missing?has_content && category.missing=='Y'>
-							<#assign missingPresent=true>
-						</#if>
-						<#if category.missType?has_content && (category.missType=='sysmiss' || category.missType=='system')>
-							<#assign systemMissingPresent=true>
-						</#if>
-						<#if category.missType?has_content && (category.missType=='item' || category.missType=='dkrf')>
-							<#assign itemMissingPresent=true>
-						</#if>
-					</#list>			
-					<#assign col1width=10>
-					<#assign col2width=70>
-					<#assign col3width=10>
-					<#assign col4width=10>
-					<#if isCodeBig && isLabelPresent>
-						<#assign col1width=20>
-						<#assign col2width=50>
-						<#assign col3width=10>
-						<#assign col4width=10>
-					<#elseif isCodeBig>
-						<#assign col1width=70>
-						<#assign col2width=10>
-						<#assign col3width=10>
-						<#assign col4width=10>
-					</#if>		
-					<thead>
-						<tr>
-							<th style="width:${col1width}%;text-align:${codeAlign}">Value</th>
-							<th style="width:${col2width}%;text-align:left;">Label</th>
-							<th style="width:${col3width}%;text-align:right;">Unweighted<br />Frequency</th>
-							<th style="width:${col4width}%;text-align:right;">%</th>
-						</tr>
-					</thead>
-					<tbody>
-						<!-- non-missing categories first -->
-						<#list variable.catgry as category>
-							<#if !category.missing?has_content || category.missing=='N'>
-								<tr>
-									<td style="text-align:center;">
-										${getCode(category)}
-									</td>
-									<td>
-										${getLabel(category)}
-									</td>
-									<td style="text-align:right;">
-										${getFreq(category)}
-									</td>
-									<td style="text-align:right;">
-										${getPercent(category)}
-									</td>
-								</tr>
-							</#if>
-						</#list>
-						<!-- now the three missing categories -->
-						<#if systemMissingPresent>
-							<tr class="categoryHeader">
-								<th> </th>
-								<th style="text-align:left" colspan="3">Missing Data (System Missing)</th>
-							</tr>
-							<#list variable.catgry as category>
-								<#if category.missType?has_content && (category.missType=='sysmiss' || category.missType=='system')>
-									<tr>
-										<td style="text-align:center;">
-											${getCode(category)}
-										</td>
-										<td>
-											${getLabel(category)}
-										</td>
-										<td style="text-align:right;">
-											${getFreq(category)}
-										</td>
-										<td style="text-align:right;">
-											${getPercent(category)}
-										</td>
-									</tr>
-								</#if>
-							</#list>
-						</#if>
-						<#if itemMissingPresent>
-							<tr class="categoryHeader">
-								<th> </th>
-								<th style="text-align:left" colspan="3">Missing Data (Don't Know/Refused)</th>
-							</tr>
-							<#list variable.catgry as category>
-								<#if category.missType?has_content && (category.missType=='item' || category.missType=='dkrf')>
-									<tr>
-										<td style="text-align:center;">
-											${getCode(category)}
-										</td>
-										<td>
-											${getLabel(category)}
-										</td>
-										<td style="text-align:right;">
-											${getFreq(category)}
-										</td>
-										<td style="text-align:right;">
-											${getPercent(category)}
-										</td>
-									</tr>
-								</#if>
-							</#list>
-						</#if>
-						<#if missingPresent>
-							<tr class="categoryHeader">
-								<th> </th>
-								<th style="text-align:left" colspan="3">Missing Data</th>
-							</tr>
-							<#list variable.catgry as category>
-								<#if category.missing?has_content && category.missing=='Y' && !category.missType?has_content>
-									<tr>
-										<td style="text-align:center;">
-											${getCode(category)}
-										</td>
-										<td>
-											${getLabel(category)}
-										</td>
-										<td style="text-align:right;">
-											${getFreq(category)}
-										</td>
-										<td style="text-align:right;">
-											${getPercent(category)}
-										</td>
-									</tr>
-								</#if>
-							</#list>
-						</#if>
-					</tbody>
-				</table>
-			</#if>
-			
+		<div class="indent">			
 			<#if variable.location??>
 				<p><strong>Location</strong></p>
 				<ul>
@@ -577,20 +427,58 @@
 	<#assign output = output + '</tr>'>
 	<#assign output = output + '</thead>'>
 	<#assign output = output + '<tbody>'>
+	<!-- non-missing categories first -->
 	<#list variable.catgry as category>
-		<#assign output = output + displayCategory(category)>
+		<#if !category.missing?has_content || category.missing=='N'>
+			<#assign output = output + displayCategory(category)>
+		</#if>
 	</#list>
+	<!-- now the three missing categories -->
+	<#if systemMissingPresent>
+		<#assign output = output + '<tr class=\"categoryHeader\">'>
+		<#assign output = output + '<th> </th>'>
+		<#assign output = output + '<th style=\"text-align:left\" colspan=\"3\">Missing Data (System Missing)</th>'>
+		<#assign output = output + '</tr>'>
+		<#list variable.catgry as category>
+			<#if category.missType?has_content && (category.missType=='sysmiss' || category.missType=='system')>
+				<#assign output = output + displayCategory(category)>
+			</#if>
+		</#list>
+	</#if>
+	<#if itemMissingPresent>
+		<#assign output = output + '<tr class=\"categoryHeader\">'>
+		<#assign output = output + '<th> </th>'>
+		<#assign output = output + '<th style=\"text-align:left\" colspan=\"3\">Missing Data (Don't Know/Refused)</th>'>
+		<#assign output = output + '</tr>'>
+		<#list variable.catgry as category>
+			<#if category.missType?has_content && (category.missType=='item' || category.missType=='dkrf')>
+				<#assign output = output + displayCategory(category)>
+			</#if>
+		</#list>
+	</#if>
+	<#if missingPresent>
+		<#assign output = output + '<tr class=\"categoryHeader\">'>
+		<#assign output = output + '<th> </th>'>
+		<#assign output = output + '<th style=\"text-align:left\" colspan=\"3\">Missing Data</th>'>
+		<#assign output = output + '</tr>'>
+		<#list variable.catgry as category>
+			<#if category.missing?has_content && category.missing=='Y' && !category.missType?has_content>
+				<#assign output = output + displayCategory(category)>
+			</#if>
+		</#list>
+	</#if>
 	<#assign output = output + '</tbody>'>
 	<#assign output = output + '</table>'>
 	<#return output>
 </#function>
 
+
 <#function displayCategory category>
 	<#assign output = '<tr>'>
-	<#assign output = output + '<td>-</td'>
-	<#assign output = output + '<td>-</td'>
-	<#assign output = output + '<td>-</td'>
-	<#assign output = output + '<td>-</td'>
+	<#assign output = output + '<td style=\"text-align:center;\">' + getCode(category) + '</td>'>
+	<#assign output = output + '<td>' + getLabel(category) + '</td>'>
+	<#assign output = output + '<td style=\"text-align:right;\">'+ getFreq(category) + '</td>'>
+	<#assign output = output + '<td style=\"text-align:right;\">' + getPercent(category) + '</td>'>
 	<#assign output = output + '</tr>'>
 	<#return output>
 </#function>
@@ -602,7 +490,6 @@
 		<#return '-'>
 	</#if>
 </#function>
-
 
 <#function getLabel category>
 	<#assign output=''>
