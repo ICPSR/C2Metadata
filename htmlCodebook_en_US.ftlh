@@ -261,7 +261,7 @@
 <#function displayVar variable>
 	<#assign output = '<h4 id="' + variable.name + '" class="variableHeader">' + variable.name>
 	<#if variable.labl?has_content>
-		<#assign output = output + ': ' + variable.labl[0]>
+		<#assign output = output + ': ' + variable.labl[0].content>
 	</#if>
 	<#assign output = output + '</h4>'>
 	<#assign output = output + '<div class=\"indent\">'>
