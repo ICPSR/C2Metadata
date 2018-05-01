@@ -499,11 +499,13 @@
 <#function displayLocation variable>
 	<#assign output = '<p><strong>Location</strong></p>'>
 	<#assign output = output + '<ul>'>
-	<#list variable.location as location>
-		<#if location.width??>
-			<#assign output = output + '<li>width:' + location.width + '</li>'>
-		</#if>
-	</#list>
+	<#if variable.location?has_content>
+		<#list variable.location as location>
+			<#if location.width?has_content>
+				<#assign output = output + '<li>width:' + location.width + '</li>'>
+			</#if>
+		</#list>
+	</#if>
 	<#assign output = output + '</ul>'>
 	<#return output>
 </#function>
