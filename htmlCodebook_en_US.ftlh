@@ -307,7 +307,7 @@
 		<#assign output = output + displayCategoryTable(variable)>
 	</#if>
 	<#if variable.location??>
-		<#assign output = output + displayLocation(variable.location)>
+		<#assign output = output + displayLocation(variable)>
 	</#if>
 	<#if variable.valrng?has_content>
 		<#assign output = output + displayValidRange(variable)>
@@ -496,7 +496,7 @@
 	<#return percent>
 </#function>
 
-<#function displayLocation location>
+<#function displayLocation variable>
 	<#assign output = '<p><strong>Location</strong></p>'>
 	<#assign output = output + '<ul>'>
 	<#list variable.location as location>
