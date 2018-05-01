@@ -238,13 +238,9 @@
 </#if>
 
 <#if codebook.dataDscr?has_content>
-
-	<h2 class="sectionHeader">Data Description</h2>
-
-	<#if codebook.dataDscr[0].var?has_content>
-		<h3 class="subSectionHeader">Variables (${codebook.dataDscr[0].var?size})</h3>
-	</#if>
 	
+	${displayDataDscr(codebook)}
+
 	<#list codebook.dataDscr[0].var as variable>
 		<h4 id="${variable.name}" class="variableHeader">${variable.name}</h4>
 		<div class="indent">
@@ -494,6 +490,15 @@
 </body>
 </html>
 
+<#function displayDataDscr codebook>
+	<#assign output = '<h2 class=\"sectionHeader\">Data Description</h2>'>
+	<#list codebook.dataDscr as dataDscr>
+		<#assign output = output + '<h3 class=\"subSectionHeader\">Variables (' + dataDscr.var?size + ')</h3>';
+	</#list>
+	<#return output>
+</#function>
+
+
 <#function getCode category>
 	<#if category.catValu?has_content>
 		<#return category.catValu.content>
@@ -574,5 +579,3 @@
 	</#if>
 	<#return output>
 </#function>
-
-
