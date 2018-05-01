@@ -306,7 +306,7 @@
 	<#if variable.catgry?has_content>
 		<#assign output = output + displayCategoryTable(variable)>
 	</#if>
-	<#if variable.location??>
+	<#if variable.location?has_content>
 		<#assign output = output + displayLocation(variable)>
 	</#if>
 	<#if variable.valrng?has_content>
