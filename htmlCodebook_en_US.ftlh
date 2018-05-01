@@ -242,19 +242,7 @@
 	${displayDataDscr(codebook)}
 
 	<#list codebook.dataDscr[0].var as variable>
-		<h4 id="${variable.name}" class="variableHeader">${variable.name}</h4>
 		<div class="indent">
-			<#if variable.qstn?has_content>
-				<#list variable.qstn as question>
-					<#if question.qstnLit?has_content>
-						<#list question.qstnLit as literalQuestion>
-							<p class="question">${literalQuestion.content}</p>
-						</#list>
-					</#if>
-					<!-- now do the same for preQTxt, postQTxt, forward, backward, ivuInstr -->
-					<!-- figure out how to handle mixed content; what if there are no sub-elements...just text? -->
-				</#list>
-			</#if>	
 			<#if variable.catgry?has_content>
 				<table class="categories">				
 					
@@ -509,7 +497,9 @@
 			<#assign output = output + displayQstn(question)>
 		</#list>
 	</#if>	
-
+	<#if variable.catgry?has_content>
+		<#assign output = output + displayCategoryTable(variable)>
+	</#if>
 
 
 	<#assign output = output + '</div>'>
@@ -531,6 +521,77 @@
 	<#list question.qstnLit as literalQuestion>
 		<#assign output = output + '<p class=\"question\">' + literalQuestion.content + '</p>'>
 	</#list>
+	<#return output>
+</#function>
+
+<#function displayCategoryTable variable>								
+	<!-- First we need to interate through the categories to determine what kind of elements are present -->
+	<#assign isCodeBig=false>
+	<#assign isLabelPresent=false>
+	<#assign codeAlign='center'>
+	<#assign missingPresent=false>
+	<#assign systemMissingPresent=false>
+	<#assign itemMissingPresent=false>
+	<#list variable.catgry as category>
+		<#if category.catValu?has_content && (category.catValu.content?trim?length &gt; codeMaxSize)>
+			<#assign isCodeBig=true>
+		</#if>
+		<#if category.labl?has_content>
+			<#assign isLabelPresent=true>
+		</#if>
+		<#if isCodeBig && !isLabelPresent>
+			<#assign codeAlign='left'>
+		</#if>
+		<#if category.missing?has_content && category.missing=='Y'>
+			<#assign missingPresent=true>
+		</#if>
+		<#if category.missType?has_content && (category.missType=='sysmiss' || category.missType=='system')>
+			<#assign systemMissingPresent=true>
+		</#if>
+		<#if category.missType?has_content && (category.missType=='item' || category.missType=='dkrf')>
+			<#assign itemMissingPresent=true>
+		</#if>
+	</#list>			
+	<#assign col1width=10>
+	<#assign col2width=70>
+	<#assign col3width=10>
+	<#assign col4width=10>
+	<#if isCodeBig && isLabelPresent>
+		<#assign col1width=20>
+		<#assign col2width=50>
+		<#assign col3width=10>
+		<#assign col4width=10>
+	<#elseif isCodeBig>
+		<#assign col1width=70>
+		<#assign col2width=10>
+		<#assign col3width=10>
+		<#assign col4width=10>
+	</#if>		
+	<#assign output = '<table class=\"categories\">'>
+	<#assign output = output + '<thead>'>
+	<#assign output = output + '<tr>'>
+	<#assign output = output + '<th style=\"width:' + col1width + '%;text-align:' + codeAlign+ '\">Value</th>'>
+	<#assign output = output + '<th style=\"width:' + col2width + '%;text-align:left;\">Label</th>'>
+	<#assign output = output + '<th style=\"width:' + col3width + '%;text-align:right;\">Unweighted<br />Frequency</th>'>
+	<#assign output = output + '<th style=\"width:' + col4width + '%;text-align:right;\">%</th>'>
+	<#assign output = output + '</tr>'>
+	<#assign output = output + '</thead>'>
+	<#assign output = output + '<tbody>'>
+	<#list variable.catgry as category>
+		<#assign output = output + displayCategory(category)>
+	</#list>
+	<#assign output = output + '</tbody>'>
+	<#assign output = output + '</table>'>
+	<#return output>
+</#function>
+
+<#function displayCategory category>
+	<#assign output = '<tr>'>
+	<#assign output = output + '<td>-</td'>
+	<#assign output = output + '<td>-</td'>
+	<#assign output = output + '<td>-</td'>
+	<#assign output = output + '<td>-</td'>
+	<#assign output = output + '</tr>'>
 	<#return output>
 </#function>
 
