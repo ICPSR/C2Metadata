@@ -493,7 +493,7 @@
 <#function displayDataDscr codebook>
 	<#assign output = '<h2 class=\"sectionHeader\">Data Description</h2>'>
 	<#list codebook.dataDscr as dataDscr>
-		<#assign output = output + '<h3 class=\"subSectionHeader\">Variables (' + dataDscr.var?size + ')</h3>';
+		<#assign output = output + '<h3 class=\"subSectionHeader\">Variables (' + dataDscr.var?size + ')</h3>'>
 	</#list>
 	<#return output>
 </#function>
@@ -579,3 +579,5 @@
 	</#if>
 	<#return output>
 </#function>
+
+
