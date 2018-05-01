@@ -239,43 +239,6 @@
 
 <#if codebook.dataDscr?has_content>
 	${displayDataDscr(codebook)}
-
-	<#list codebook.dataDscr[0].var as variable>
-		<div class="indent">			
-			<#if variable.sumStat?has_content>
-				<#assign invalid=''>
-				<#assign valid=''>
-				<#list variable.sumStat as sumStat>
-					<#if sumStat.type=='invd'>
-						<#assign invalid=sumStat.content?trim>
-					<#elseif sumStat.type=='vald'>
-						<#assign valid=sumStat.content?trim>
-					</#if>
-				</#list>
-				<#if invalid?has_content && valid?has_content>
-					<p>Based upon ${valid?number} valid cases out of ${valid?number + invalid?number} total cases.</p>
-				</#if>
-				<ul>
-					<#list variable.sumStat as sumStat>
-						<#if sumStat.type!='invd' && sumStat.type!='vald'>
-							<li>${getSumStatLabel(sumStat)}: ${sumStat.content?trim}</li>
-						</#if>
-					</#list>
-				</ul>
-			</#if>
-		
-			<#if variable.varFormat??>
-				<p><strong>Variable Format:</strong> 
-				<#if variable.varFormat.content?has_content>
-					${variable.varFormat.content}
-				</#if>
-				<#if variable.varFormat.type?has_content>${variable.varFormat.type}</#if>
-				<#if variable.varFormat.schema?has_content> (${variable.varFormat.schema})</#if>
-			</#if>		
-		
-		</div>
-	</#list>
-
 </#if>
 
 
@@ -315,12 +278,23 @@
 	<#if variable.invalrng?has_content>
 		<#assign output = output + displayInvalidRange(variable)>
 	</#if>
-
-
-
-
-
+	<#if variable.sumStat?has_content>
+		<#assign output = output + displaySumStats(variable)>
+	</#if>
+	<#if variable.varFormat??>
+		<#assign output = output + displayVarFormat(variable)>
+	</#if>		
 	<#assign output = output + '</div>'>
+	<#return output>
+</#function>
+
+<#function displayVarFormat variable>
+	<#assign output = '<p><strong>Variable Format:</strong>'>
+		<#if variable.varFormat.content?has_content>
+			<#assign output = output + variable.varFormat.content>
+		</#if>
+		<#if variable.varFormat.type?has_content><#assign output = output + ' ' + variable.varFormat.type></#if>
+		<#if variable.varFormat.schema?has_content><#assign output = output + ' (' + variable.varFormat.schema + ')'></#if>
 	<#return output>
 </#function>
 
@@ -554,16 +528,29 @@
 	<#return output>
 </#function>
 
-
-
-
-
-
-
-
-
-
-
+<#function displaySumStats variable>
+	<#assign output =''>
+	<#assign invalid=''>
+	<#assign valid=''>
+	<#list variable.sumStat as sumStat>
+		<#if sumStat.type=='invd'>
+			<#assign invalid=sumStat.content?trim>
+		<#elseif sumStat.type=='vald'>
+			<#assign valid=sumStat.content?trim>
+		</#if>
+	</#list>
+	<#if invalid?has_content && valid?has_content>
+		<#assign output = output + '<p>Based upon ' + valid?number + ' valid cases out of ' + (valid?number + invalid?number) + ' total cases.</p>'>
+	</#if>
+	<#assign output = output + '<ul>'>
+		<#list variable.sumStat as sumStat>
+			<#if sumStat.type!='invd' && sumStat.type!='vald'>
+				<#assign output = output + '<li>' + getSumStatLabel(sumStat) + ': ' + sumStat.content?trim + '</li>'>
+			</#if>
+		</#list>
+	<#assign output = output + '</ul>'>
+	<#return output>
+</#function>
 
 <#function getSumStatLabel sumStat>
 	<#if sumStat.type=='mean'>
