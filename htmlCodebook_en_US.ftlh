@@ -259,7 +259,11 @@
 </#function>
 
 <#function displayVar variable>
-	<#assign output = '<h4 id=\"' + variable.name + '\" class=\"variableHeader\">' + variable.name+ '</h4>'>
+	<#assign output = '<h4 id=\"' + variable.name + '\" class=\"variableHeader\">' + variable.name>
+	<#if variable.labl?has_content>
+		<#assign output = output + ': ' + variable.labl>
+	</#if>
+	<#assign output = output + '</h4>'>
 	<#assign output = output + '<div class=\"indent\">'>
 	<#if variable.qstn?has_content>
 		<#list variable.qstn as question>
@@ -284,17 +288,10 @@
 	<#if variable.varFormat??>
 		<#assign output = output + displayVarFormat(variable)>
 	</#if>		
+	<#if variable.derivation??>
+		<#assign output = output + displayDerivation(variable)>
+	</#if>		
 	<#assign output = output + '</div>'>
-	<#return output>
-</#function>
-
-<#function displayVarFormat variable>
-	<#assign output = '<p><strong>Variable Format:</strong>'>
-		<#if variable.varFormat.content?has_content>
-			<#assign output = output + variable.varFormat.content>
-		</#if>
-		<#if variable.varFormat.type?has_content><#assign output = output + ' ' + variable.varFormat.type></#if>
-		<#if variable.varFormat.schema?has_content><#assign output = output + ' (' + variable.varFormat.schema + ')'></#if>
 	<#return output>
 </#function>
 
@@ -574,8 +571,29 @@
 	</#if>
 </#function>
 
+<#function displayVarFormat variable>
+	<#assign output = '<p><strong>Variable Format:</strong>'>
+		<#if variable.varFormat.content?has_content>
+			<#assign output = output + variable.varFormat.content>
+		</#if>
+		<#if variable.varFormat.type?has_content><#assign output = output + ' ' + variable.varFormat.type></#if>
+		<#if variable.varFormat.schema?has_content><#assign output = output + ' (' + variable.varFormat.schema + ')'></#if>
+	<#return output>
+</#function>
 
 
+<#function displayDerivation variable>
+	<#assign output = '<p><strong>Derivation</strong></p>'>
+	<#list variable.derivation.drvcmd as command>
+			<#assign output = output + displayDerivationCommand(command)>
+	</#list>
+	<#return output>
+</#function>
+
+<#function displayDerivationCommand command>
+	<#assign output = '<p>' + command.content + '</p>'>
+	<#return output>
+</#function>
 
 <#function getGrantNo prodStmt fundAg>
 	<#assign output=''>
