@@ -238,54 +238,10 @@
 </#if>
 
 <#if codebook.dataDscr?has_content>
-	
 	${displayDataDscr(codebook)}
 
 	<#list codebook.dataDscr[0].var as variable>
 		<div class="indent">			
-			<#if variable.location??>
-				<p><strong>Location</strong></p>
-				<ul>
-				<#list variable.location as location>
-					<#if location.width??>
-						<li>width: ${location.width}</li>
-					</#if>
-				</#list>
-				</ul>
-			</#if>
-			
-			<#if variable.valrng?has_content>
-				<p><strong>Valid Range:</strong> 
-					<#list variable.valrng as valrng>
-						<#if valrng.itemOrRange?has_content>
-							<#list valrng.itemOrRange as itemOrRange>
-								<#if itemOrRange.min?has_content>${itemOrRange.min}</#if>
-								<#if itemOrRange.max?has_content>-${itemOrRange.max}</#if>
-								<#if itemOrRange.VALUE?has_content>${itemOrRange.VALUE}</#if>
-								<#sep>, </#sep>	
-							</#list>			
-						</#if>
-						<#sep>; </#sep>
-					</#list>
-				</p>
-			</#if>
-			
-			<#if variable.invalrng?has_content>
-				<p><strong>Invalid Range:</strong> 
-					<#list variable.invalrng as invalrng>
-						<#if invalrng.itemOrRange?has_content>
-							<#list invalrng.itemOrRange as itemOrRange>
-								<#if itemOrRange.min?has_content>${itemOrRange.min}</#if>
-								<#if itemOrRange.max?has_content>-${itemOrRange.max}</#if>
-								<#if itemOrRange.VALUE?has_content>${itemOrRange.VALUE}</#if>
-								<#sep>, </#sep>	
-							</#list>				
-						</#if>
-						<#sep>; </#sep>
-					</#list>
-				</p>
-			</#if>
-			
 			<#if variable.sumStat?has_content>
 				<#assign invalid=''>
 				<#assign valid=''>
@@ -350,6 +306,18 @@
 	<#if variable.catgry?has_content>
 		<#assign output = output + displayCategoryTable(variable)>
 	</#if>
+	<#if variable.location??>
+		<#assign output = output + displayLocation(variable.location)>
+	</#if>
+	<#if variable.valrng?has_content>
+		<#assign output = output + displayValidRange(variable)>
+	</#if>
+	<#if variable.invalrng?has_content>
+		<#assign output = output + displayInvalidRange(variable)>
+	</#if>
+
+
+
 
 
 	<#assign output = output + '</div>'>
@@ -528,6 +496,73 @@
 	<#return percent>
 </#function>
 
+<#function displayLocation location>
+	<#assign output = '<p><strong>Location</strong></p>'>
+	<#assign output = output + '<ul>'>
+	<#list variable.location as location>
+		<#if location.width??>
+			<#assign output = output + '<li>width:' + location.width + '</li>'>
+		</#if>
+	</#list>
+	<#assign output = output + '</ul>'>
+	<#return output>
+</#function>
+
+<#function displayValidRange variable>
+	<#assign output = '<p><strong>Valid Range:</strong> '>
+	<#list variable.valrng as valrng>
+		<#if valrng.itemOrRange?has_content>
+			<#list valrng.itemOrRange as itemOrRange>
+				<#if itemOrRange.min?has_content>
+					<#assign output = output + itemOrRange.min>
+				</#if>
+				<#if itemOrRange.max?has_content>
+					<#assign output = output + '-' + itemOrRange.max>
+				</#if>
+				<#if itemOrRange.VALUE?has_content>
+					<#assign output = output + itemOrRange.VALUE>
+				</#if>
+				<#sep><#assign output = output + ', '></#sep>	
+			</#list>			
+		</#if>
+		<#sep><#assign output = output + '; '></#sep>
+	</#list>
+	<#return output>
+</#function>
+
+<#function displayInvalidRange variable>
+	<#assign output = '<p><strong>Invalid Range:</strong> '>
+	<#list variable.invalrng as valrng>
+		<#if invalrng.itemOrRange?has_content>
+			<#list invalrng.itemOrRange as itemOrRange>
+				<#if itemOrRange.min?has_content>
+					<#assign output = output + itemOrRange.min>
+				</#if>
+				<#if itemOrRange.max?has_content>
+					<#assign output = output + '-' + itemOrRange.max>
+				</#if>
+				<#if itemOrRange.VALUE?has_content>
+					<#assign output = output + itemOrRange.VALUE>
+				</#if>
+				<#sep><#assign output = output + ', '></#sep>	
+			</#list>			
+		</#if>
+		<#sep><#assign output = output + '; '></#sep>
+	</#list>
+	<#return output>
+</#function>
+
+
+
+
+
+
+
+
+
+
+
+
 <#function getSumStatLabel sumStat>
 	<#if sumStat.type=='mean'>
 		<#return 'Mean'>
@@ -549,6 +584,9 @@
 		<#return 'Other'>
 	</#if>
 </#function>
+
+
+
 
 <#function getGrantNo prodStmt fundAg>
 	<#assign output=''>
