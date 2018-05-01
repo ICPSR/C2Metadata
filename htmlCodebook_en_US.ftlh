@@ -261,7 +261,7 @@
 <#function displayVar variable>
 	<#assign output = '<h4 id="' + variable.name + '" class="variableHeader">' + variable.name>
 	<#if variable.labl?has_content>
-		<#assign output = output + ': ' + variable.labl[0].content>
+		<#assign output = output + displayLabel(variable)>
 	</#if>
 	<#assign output = output + '</h4>'>
 	<#assign output = output + '<div class=\"indent\">'>
@@ -292,6 +292,16 @@
 		<#assign output = output + displayDerivation(variable)>
 	</#if>		
 	<#assign output = output + '</div>'>
+	<#return output>
+</#function>
+
+<#function displayLabel variable>
+	<#assign output = ': '>
+	<#list variable.labl as label>
+		<#if label.content?has_content>
+			<#assign output = output + label.content + ' '>
+		</#if>
+	</#list>
 	<#return output>
 </#function>
 
