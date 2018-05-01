@@ -448,7 +448,7 @@
 	<#if itemMissingPresent>
 		<#assign output = output + '<tr class=\"categoryHeader\">'>
 		<#assign output = output + '<th> </th>'>
-		<#assign output = output + '<th style=\"text-align:left\" colspan=\"3\">Missing Data (Don\aapos;t Know/Refused)</th>'>
+		<#assign output = output + "<th style=\"text-align:left\" colspan=\"3\">Missing Data (Don't Know/Refused)</th>">
 		<#assign output = output + '</tr>'>
 		<#list variable.catgry as category>
 			<#if category.missType?has_content && (category.missType=='item' || category.missType=='dkrf')>
