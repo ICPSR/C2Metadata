@@ -534,23 +534,23 @@
 
 <#function displayInvalidRange variable>
 	<#assign output = '<p><strong>Invalid Range:</strong> '>
-	<#list variable.invalrng as valrng>
-		<#if invalrng.itemOrRange?has_content>
-			<#list invalrng.itemOrRange as itemOrRange>
-				<#if itemOrRange.min?has_content>
-					<#assign output = output + itemOrRange.min>
-				</#if>
-				<#if itemOrRange.max?has_content>
-					<#assign output = output + '-' + itemOrRange.max>
-				</#if>
-				<#if itemOrRange.VALUE?has_content>
-					<#assign output = output + itemOrRange.VALUE>
-				</#if>
-				<#sep><#assign output = output + ', '></#sep>	
-			</#list>			
-		</#if>
-		<#sep><#assign output = output + '; '></#sep>
-	</#list>
+		<#list variable.invalrng as invalrng>
+			<#if invalrng.itemOrRange?has_content>
+				<#list invalrng.itemOrRange as itemOrRange>
+					<#if itemOrRange.min?has_content>
+						<#assign output = output + itemOrRange.min>
+					</#if>
+					<#if itemOrRange.max?has_content>
+						<#assign output = output + '-' + itemOrRange.max>
+					</#if>
+					<#if itemOrRange.VALUE?has_content>
+						<#assign output = output + itemOrRange.VALUE>
+					</#if>
+					<#sep><#assign output = output + ', '></#sep>	
+				</#list>			
+			</#if>
+			<#sep><#assign output = output + '; '></#sep>
+		</#list>
 	<#return output>
 </#function>
 
