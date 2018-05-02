@@ -595,13 +595,26 @@
 <#function displayDerivation variable>
 	<#assign output = '<p><strong>Derivation</strong></p>'>
 	<#list variable.derivation.drvcmd as command>
-			<#assign output = output + displayDerivationCommand(command)>
+		<#assign output = output + displayDerivationCommand(command)>
+	</#list>
+	<#list variable.derivation.drvdesc as description>
+		<#assign output = output + displayDerivationDescription(description)>
 	</#list>
 	<#return output>
 </#function>
 
 <#function displayDerivationCommand command>
-	<#assign output = '<p>' + command.content + '</p>'>
+	<#assign output = '<p>'>
+	<#if command.syntax?has_content>
+		<#assign output = output + '<em>' + command.syntax + '</em>: '>
+	</#if>
+	<#assign output = output + command.content>
+	<#assign output = output + '</p>'>
+	<#return output>
+</#function>
+
+<#function displayDerivationDescription description>
+	<#assign output = '<p><em>' + description.content + '</em></p>'>
 	<#return output>
 </#function>
 
