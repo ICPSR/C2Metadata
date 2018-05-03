@@ -604,17 +604,16 @@
 </#function>
 
 <#function displayDerivationCommand command>
-	<#assign output = '<p>'>
+	<#assign output = '<p><em>Command</em></p>'>
 	<#if command.syntax?has_content>
-		<#assign output = output + '<em>' + command.syntax + '</em>: '>
+		<#assign output = '<p><em>Command (' + command.syntax + ')</em></p>'>
 	</#if>
-	<#assign output = output + command.content>
-	<#assign output = output + '</p>'>
+	<#assign output = output + '<pre>' + command.content + '</pre>'>
 	<#return output>
 </#function>
 
 <#function displayDerivationDescription description>
-	<#assign output = '<p><em>' + description.content + '</em></p>'>
+	<#assign output = '<p><em>Description:</em> ' + description.content + '</p>'>
 	<#return output>
 </#function>
 
