@@ -248,8 +248,9 @@
 </html>
 
 <#function displayDataDscr codebook>
-	<#assign output = '<h2 class=\"sectionHeader\">Data Description</h2>'>
+	<#assign output = ''>
 	<#list codebook.dataDscr as dataDscr>
+		<#assign output = output + '<h2 class=\"sectionHeader\">Data Description ' + dataDscr?index + '</h2>'>
 		<#assign output = output + '<h3 class=\"subSectionHeader\">Variables (' + dataDscr.var?size + ')</h3>'>
 		<#list dataDscr.var as var>
 			<#assign output = output + displayVar(var)>
@@ -259,7 +260,7 @@
 </#function>
 
 <#function displayVar variable>
-	<#assign output = '<h4 id="' + variable.name + '" class="variableHeader">' + variable.name>
+	<#assign output = '<h4 id="' + variable.ID + '" class="variableHeader">' + variable.name>
 	<#if variable.labl?has_content>
 		<#assign output = output + displayLabel(variable)>
 	</#if>
@@ -593,13 +594,20 @@
 
 
 <#function displayDerivation variable>
-	<#assign output = '<p><strong>Derivation</strong></p>'>
-	<#list variable.derivation.drvcmd as command>
-		<#assign output = output + displayDerivationCommand(command)>
-	</#list>
-	<#list variable.derivation.drvdesc as description>
-		<#assign output = output + displayDerivationDescription(description)>
-	</#list>
+	<#assign output = ''>
+	<#if variable.derivation.drvcmd?has_content || variable.derivation.drvdesc?has_content>
+		<#assign output = output + '<p><strong>Derivation</strong>'>
+		<#if variable.derivation.var?has_content>
+			<#assign output = output + ' (from <a href="#' + variable.derivation.var + '">' + variable.derivation.var +'</a>)'>
+		</#if>
+		<#assign output = output + '</p>'>
+		<#list variable.derivation.drvcmd as command>
+			<#assign output = output + displayDerivationCommand(command)>
+		</#list>
+		<#list variable.derivation.drvdesc as description>
+			<#assign output = output + displayDerivationDescription(description)>
+		</#list>
+	</#if>
 	<#return output>
 </#function>
 
