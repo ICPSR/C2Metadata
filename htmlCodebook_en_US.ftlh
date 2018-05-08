@@ -600,7 +600,8 @@
 		<#if variable.derivation.var?has_content>
 			<#assign output = output + ' (from '>
 			<#list variable.derivation.var as var>
-				<#assign output = output + '<a href="#' + var + '">' + var +'</a>'><#sep>, </#sep>
+				<#assign output = output + '<a href="#' + var + '">' + var +'</a>'>
+				<#sep><#assign output = output + ', '></#sep>
 			</#list>
 			<#assign output = output + ')'>
 		</#if>
