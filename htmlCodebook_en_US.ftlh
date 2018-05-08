@@ -593,18 +593,21 @@
 </#function>
 
 
+
 <#function displayDerivation variable>
 	<#assign output = ''>
-	<#if variable.derivation.drvcmd?has_content || variable.derivation.drvdesc?has_content || variable.derivation.var?has_content>
+	<#if variable.derivation.drvcmd?has_content || variable.derivation.drvdesc?has_content>
 		<#assign output = output + '<p><strong>Derivation</strong>'>
+		<#-- DOES NOT WORK
 		<#if variable.derivation.var?has_content>
 			<#assign output = output + ' (from '>
 			<#list variable.derivation.var as variable>
-				<#assign output = output + variable.name.content>
+				<#assign output = output + variable.name>  THIS ALWAYS COMES THROUGH AS AN OBJECT
 				<#sep><#assign output = output + ', '></#sep>
 			</#list>
 			<#assign output = output + ')'>
 		</#if>
+		-->
 		<#assign output = output + '</p>'>
 		<#list variable.derivation.drvcmd as command>
 			<#assign output = output + displayDerivationCommand(command)>
