@@ -250,7 +250,7 @@
 <#function displayDataDscr codebook>
 	<#assign output = ''>
 	<#list codebook.dataDscr as dataDscr>
-		<#assign output = output + '<h2 class=\"sectionHeader\">Data Description ' + dataDscr?index + '</h2>'>
+		<#assign output = output + '<h2 class=\"sectionHeader\">Data Description ' + (dataDscr?index+1) + '</h2>'>
 		<#assign output = output + '<h3 class=\"subSectionHeader\">Variables (' + dataDscr.var?size + ')</h3>'>
 		<#list dataDscr.var as var>
 			<#assign output = output + displayVar(var)>
@@ -595,7 +595,7 @@
 
 <#function displayDerivation variable>
 	<#assign output = ''>
-	<#if variable.derivation.drvcmd?has_content || variable.derivation.drvdesc?has_content>
+	<#if variable.derivation.drvcmd?has_content || variable.derivation.drvdesc?has_content || variable.derivation.var?has_content>
 		<#assign output = output + '<p><strong>Derivation</strong>'>
 		<#if variable.derivation.var?has_content>
 			<#assign output = output + ' (from <a href="#' + variable.derivation.var + '">' + variable.derivation.var +'</a>)'>
