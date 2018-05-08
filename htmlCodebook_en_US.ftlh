@@ -250,7 +250,8 @@
 <#function displayDataDscr codebook>
 	<#assign output = ''>
 	<#list codebook.dataDscr as dataDscr>
-		<#assign output = output + '<h2 class=\"sectionHeader\">Data Description ' + (dataDscr?index+1) + '</h2>'>
+		<#assign displayIndex = dataDscr?index + 1>
+		<#assign output = output + '<h2 class=\"sectionHeader\">Data Description ' + displayIndex + '</h2>'>
 		<#assign output = output + '<h3 class=\"subSectionHeader\">Variables (' + dataDscr.var?size + ')</h3>'>
 		<#list dataDscr.var as var>
 			<#assign output = output + displayVar(var)>
