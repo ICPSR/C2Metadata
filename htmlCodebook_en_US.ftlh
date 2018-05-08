@@ -599,8 +599,8 @@
 		<#assign output = output + '<p><strong>Derivation</strong>'>
 		<#if variable.derivation.var?has_content>
 			<#assign output = output + ' (from '>
-			<#list variable.derivation.var as var>
-				<#assign output = output + var>
+			<#list variable.derivation.var as variable>
+				<#assign output = output + variable.name>
 				<#sep><#assign output = output + ', '></#sep>
 			</#list>
 			<#assign output = output + ')'>
