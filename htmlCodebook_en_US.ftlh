@@ -598,7 +598,11 @@
 	<#if variable.derivation.drvcmd?has_content || variable.derivation.drvdesc?has_content || variable.derivation.var?has_content>
 		<#assign output = output + '<p><strong>Derivation</strong>'>
 		<#if variable.derivation.var?has_content>
-			<#assign output = output + ' (from <a href="#' + variable.derivation.var[0] + '">' + variable.derivation.var[0] +'</a>)'>
+			<#assign output = output + ' (from '>
+			<#list variable.derivation.var as var>
+				<#assign output = output + <a href="#' + var + '">' + var +'</a><#sep>, </#sep>
+			</#list>
+			<#assign output = output + ')'>
 		</#if>
 		<#assign output = output + '</p>'>
 		<#list variable.derivation.drvcmd as command>
