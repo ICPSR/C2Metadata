@@ -709,5 +709,3 @@
 	</#if>
 	<#return output>
 </#function>
-
-
