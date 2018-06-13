@@ -280,10 +280,18 @@
 	<#if fileTxt.dimensns?has_content && (fileTxt.dimensns.caseQnty?has_content || fileTxt.dimensns.varQnty?has_content)>
 		<#assign output = output + '<ul>'>
 		<#if fileTxt.dimensns.caseQnty?has_content>
-			<#assign output = output + '<li>' + fileTxt.dimensns.caseQnty + '</li>'>
+			<#assign output = output + '<li>Number of Cases: '>
+			<#list fileTxt.dimensns.caseQnty as caseQnty>
+				<#assign output = output + caseQnty><#sep>, </#sep>	
+			</#list>
+			<#assign output = output + '</li>'>
 		</#if>
 		<#if fileTxt.dimensns.varQnty?has_content>
-			<#assign output = output + '<li>' + fileTxt.dimensns.varQnty + '</li>'>
+			<#assign output = output + '<li>Variable Count: '>
+			<#list fileTxt.dimensns.varQnty as varQnty>
+				<#assign output = output + varQnty><#sep>, </#sep>	
+			</#list>
+			<#assign output = output + '</li>'>
 		</#if>
 		<#assign output = output + '</ul>'>
 	</#if>
