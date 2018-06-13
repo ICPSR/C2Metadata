@@ -313,12 +313,23 @@
 
 <#function displayDataDscr codebook>
 	<#assign output = ''>
+	<#assign collapseId = 'dataDscr' + dataDscr?index>
+	<#assign expanded = 'false'>
+	<#if dataDscr?index = 0>
+		<#assign expanded = 'true'>
+	</#if>
+	<#assign collapseLink = '<a href=\"#' + collapseId + '\" data-toggle=\"collapse\" aria-expanded=\"' + expanded + '\" aria-controls=\"' + collapseId + '\">'>
 	<#list codebook.dataDscr as dataDscr>
-		<#assign output = output + '<h2 class=\"sectionHeader\">Data Description ' + (dataDscr?index + 1)+ '</h2>'>
-		<#assign output = output + '<h3 class=\"subSectionHeader\">Variables (' + dataDscr.var?size + ')</h3>'>
+		<#assign output = output + '<h2 class=\"sectionHeader\">' + collapseLink + 'Data Description ' + (dataDscr?index + 1)+ '</a></h2>'>
+		<#assign style = 'collapse'>
+		<#if dataDscr?index != 0>
+			<#assign style = 'collapse in'>
+		</#if>
+		<#assign output = output + '<div class=\"' + style + '\" id=\"' + collapseId + '\"><h3 class=\"subSectionHeader\">Variables (' + dataDscr.var?size + ')</h3>'>
 		<#list dataDscr.var as var>
 			<#assign output = output + displayVar(var)>
 		</#list>
+		<#assign output = output + '</div>'>
 	</#list>
 	<#return output>
 </#function>
