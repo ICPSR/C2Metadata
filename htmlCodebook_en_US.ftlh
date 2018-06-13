@@ -270,7 +270,11 @@
 	</#list>
 	<#assign output = output + '</strong>'>
 	<#if fileTxt.fileType?has_content>
-		<#assign output = output + ' (' + fileTxt.fileType.content + ')'>
+		<#assign output = output + ' ('>
+		<#list fileTxt.fileType as fileType>
+			<#assign output = output + fileType.content><#sep>, </#sep>	
+		</#list>
+		<#assign output = output + ')'>
 	</#if>
 	<#assign output = output + '</p>'>
 	<#if fileTxt.dimensns?has_content && (fileTxt.dimensns.caseQnty?has_content || fileTxt.dimensns.varQnty?has_content)>
