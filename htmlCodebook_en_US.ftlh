@@ -313,13 +313,13 @@
 
 <#function displayDataDscr codebook>
 	<#assign output = ''>
-	<#assign collapseId = 'dataDscr' + dataDscr?index>
-	<#assign expanded = 'false'>
-	<#if dataDscr?index = 0>
-		<#assign expanded = 'true'>
-	</#if>
-	<#assign collapseLink = '<a href=\"#' + collapseId + '\" data-toggle=\"collapse\" aria-expanded=\"' + expanded + '\" aria-controls=\"' + collapseId + '\">'>
 	<#list codebook.dataDscr as dataDscr>
+		<#assign collapseId = 'dataDscr' + dataDscr?index>
+		<#assign expanded = 'false'>
+		<#if dataDscr?index = 0>
+			<#assign expanded = 'true'>
+		</#if>
+		<#assign collapseLink = '<a href=\"#' + collapseId + '\" data-toggle=\"collapse\" aria-expanded=\"' + expanded + '\" aria-controls=\"' + collapseId + '\">'>
 		<#assign output = output + '<h2 class=\"sectionHeader\">' + collapseLink + 'Data Description ' + (dataDscr?index + 1)+ '</a></h2>'>
 		<#assign style = 'collapse'>
 		<#if dataDscr?index != 0>
