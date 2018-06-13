@@ -264,7 +264,11 @@
 </#function>
 
 <#function displayFileTxt fileTxt>
-	<#assign output = '<p><strong>' + fileTxt.fileName.content + '</strong>'>
+	<#assign output = '<p><strong>'>
+	<#list fileTxt.fileName as fileName>
+		<#assign output = output + fileName><#sep>, </#sep>	
+	</#list>
+	<#assign output = output + '</strong>'>
 	<#if fileTxt.fileType?has_content>
 		<#assign output = output + ' (' + fileTxt.fileType.content + ')'>
 	</#if>
