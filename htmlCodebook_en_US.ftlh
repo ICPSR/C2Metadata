@@ -266,7 +266,7 @@
 <#function displayFileTxt fileTxt>
 	<#assign output = '<p><strong>'>
 	<#list fileTxt.fileName as fileName>
-		<#assign output = output + fileName><#sep>, </#sep>	
+		<#assign output = output + fileName.content><#sep>, </#sep>	
 	</#list>
 	<#assign output = output + '</strong>'>
 	<#if fileTxt.fileType?has_content>
@@ -282,14 +282,14 @@
 		<#if fileTxt.dimensns.caseQnty?has_content>
 			<#assign output = output + '<li>Number of Cases: '>
 			<#list fileTxt.dimensns.caseQnty as caseQnty>
-				<#assign output = output + caseQnty><#sep>, </#sep>	
+				<#assign output = output + caseQnty.content><#sep>, </#sep>	
 			</#list>
 			<#assign output = output + '</li>'>
 		</#if>
 		<#if fileTxt.dimensns.varQnty?has_content>
 			<#assign output = output + '<li>Variable Count: '>
 			<#list fileTxt.dimensns.varQnty as varQnty>
-				<#assign output = output + varQnty><#sep>, </#sep>	
+				<#assign output = output + varQnty.content><#sep>, </#sep>	
 			</#list>
 			<#assign output = output + '</li>'>
 		</#if>
@@ -709,3 +709,5 @@
 	</#if>
 	<#return output>
 </#function>
+
+
