@@ -254,12 +254,12 @@
 		<#list fileDscr.fileTxt as fileTxt>
 			<#assign output = output + displayFileTxt(fileTxt)>
 		</#list>
+		<#if fileDscr.notes?has_content>
+			<#list fileDscr.notes as note>
+				<#assign output = output + displayNotes(note)>
+			</#list>
+		</#if>
 	</#list>
-	<#if fileDscr.notes?has_content>
-		<#list fileDscr.notes as note>
-			<#assign output = output + displayNotes(note)>
-		</#list>
-	</#if>
 	<#return output>
 </#function>
 
