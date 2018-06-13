@@ -264,7 +264,7 @@
 </#function>
 
 <#function displayFileTxt fileTxt>
-	<#assign output = '<p><strong>' + fileTxt.fileName + '</strong>'>
+	<#assign output = '<p><strong>' + fileTxt.fileName.content + '</strong>'>
 	<#if fileTxt.fileType?has_content>
 		<#assign output = output + ' (' + fileTxt.fileType.content + ')'>
 	</#if>
