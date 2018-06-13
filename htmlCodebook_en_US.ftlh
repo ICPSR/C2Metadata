@@ -234,7 +234,7 @@
 </#if>
 
 <#if codebook.fileDscr?has_content>
-	<h2 class="sectionHeader">File Description</h2>
+	${displayFileDscr(codebook)}
 </#if>
 
 <#if codebook.dataDscr?has_content>
@@ -246,6 +246,54 @@
 
 </body>
 </html>
+
+<#function displayFileDscr codebook>
+	<#assign output = ''>
+	<#list codebook.fileDscr as fileDscr>
+		<#assign output = output + '<h2 class=\"sectionHeader\">File Description ' + (fileDscr?index + 1)+ '</h2>'>
+		<#list fileDscr.fileTxt as fileTxt>
+			<#assign output = output + displayFileTxt(fileTxt)>
+		</#list>
+	</#list>
+	<#if fileDscr.notes?has_content>
+		<#list fileDscr.notes as note>
+			<#assign output = output + displayNotes(note)>
+		</#list>
+	</#if>
+	<#return output>
+</#function>
+
+<#function displayFileTxt fileTxt>
+	<#assign output = '<p><strong>' + fileTxt.fileName + '</strong>'>
+	<#if fileTxt.fileType?has_content>
+		<#assign output = output + ' (' + fileTxt.fileType.content + ')'>
+	</#if>
+	<#assign output = output + '</p>'>
+	<#if fileTxt.dimensns?has_content && (fileTxt.dimensns.caseQnty?has_content || fileTxt.dimensns.varQnty?has_content)>
+		<#assign output = output + '<ul>'>
+		<#if fileTxt.dimensns.caseQnty?has_content>
+			<#assign output = output + '<li>' + fileTxt.dimensns.caseQnty + '</li>'>
+		</#if>
+		<#if fileTxt.dimensns.varQnty?has_content>
+			<#assign output = output + '<li>' + fileTxt.dimensns.varQnty + '</li>'>
+		</#if>
+		<#assign output = output + '</ul>'>
+	</#if>
+
+	<#return output>
+</#function>
+
+<#function displayNotes note>
+	<#assign output = ''>
+	<#assign output = output + '<p>' + notes.content + '</p>'>
+	<#return output>
+</#function>
+
+
+
+
+
+
 
 <#function displayDataDscr codebook>
 	<#assign output = ''>
