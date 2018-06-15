@@ -7,6 +7,8 @@
 	<#assign codeMaxSize=6>
 	<title>HTML Codebook</title>
 
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" />
+
 	<style type="text/css" media="all">
 	
 		body {
@@ -26,6 +28,7 @@
     		content: ' ';
     		display: block;
     		border: 1px solid #0a37a5;
+    		margin-bottom: 5px;
 		}
 		
 		.indent {
@@ -93,6 +96,11 @@
 		}
 		
 	</style>	
+	
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>	
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	
+	
 </head>
 <body>
 
@@ -316,11 +324,13 @@
 	<#list codebook.dataDscr as dataDscr>
 		<#assign collapseId = 'dataDscr' + dataDscr?index>
 		<#assign expanded = 'false'>
+		<#assign title = 'Current Variable Descriptions'>
 		<#if dataDscr?index = 0>
 			<#assign expanded = 'true'>
+			<#assign title = 'Variable Descriptions Before Transformation'>
 		</#if>
-		<#assign collapseLink = '<a href=\"#' + collapseId + '\" data-toggle=\"collapse\" aria-expanded=\"' + expanded + '\" aria-controls=\"' + collapseId + '\">'>
-		<#assign output = output + '<h2 class=\"sectionHeader\">' + collapseLink + 'Data Description ' + (dataDscr?index + 1)+ '</a></h2>'>
+		<#assign collapseLink = '<a href=\"#' + collapseId + '\" data-toggle=\"collapse\" aria-expanded=\"' + expanded + '\" aria-controls=\"' + collapseId + '\" role=\"button\">'>
+		<#assign output = output + '<h2 class=\"sectionHeader\">' + collapseLink + title + '</a></h2>'>
 		<#assign style = 'collapse'>
 		<#if dataDscr?index != 0>
 			<#assign style = 'collapse in'>
@@ -667,29 +677,31 @@
 	<#return output>
 </#function>
 
-
-
 <#function displayDerivation variable>
 	<#assign output = ''>
-	<#if variable.derivation.drvcmd?has_content || variable.derivation.drvdesc?has_content>
-		<#assign output = output + '<p><strong>Derivation</strong>'>
-		<#-- DOES NOT WORK
+	<#if variable.derivation?has_content>
+		<#assign varLink = ''>	
 		<#if variable.derivation.var?has_content>
-			<#assign output = output + ' (from '>
-			<#list variable.derivation.var as variable>
-				<#assign output = output + variable.name>  THIS ALWAYS COMES THROUGH AS AN OBJECT
-				<#sep><#assign output = output + ', '></#sep>
+			<#list variable.derivation.var as var>
+				<#assign varLink = varLink + '<a href=\"#' + var.ID + '\">' + var.ID + '</a>'>
+				<#sep><#assign varLink = varLink + ', '></#sep>
 			</#list>
-			<#assign output = output + ')'>
 		</#if>
-		-->
+		<#assign output = output + '<p><strong>Derivation</strong>'>
+		<#if variable.derivation.var?has_content>
+			<#assign output = output + ' (from ' + varLink + ')'>
+		</#if>
 		<#assign output = output + '</p>'>
-		<#list variable.derivation.drvcmd as command>
-			<#assign output = output + displayDerivationCommand(command)>
-		</#list>
-		<#list variable.derivation.drvdesc as description>
-			<#assign output = output + displayDerivationDescription(description)>
-		</#list>
+		<#if variable.derivation.drvdesc?has_content>	
+			<#list variable.derivation.drvdesc as description>
+				<#assign output = output + displayDerivationDescription(description)>
+			</#list>
+		</#if>
+		<#if variable.derivation.drvcmd?has_content>	
+			<#list variable.derivation.drvcmd as command>
+				<#assign output = output + displayDerivationCommand(command)>
+			</#list>
+		</#if>
 	</#if>
 	<#return output>
 </#function>
