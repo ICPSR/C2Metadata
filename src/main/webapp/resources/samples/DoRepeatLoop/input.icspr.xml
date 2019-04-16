@@ -1,0 +1,422 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<codeBook version="1.2.2" ID="Temp1" xml-lang="en" xmlns="http://www.icpsr.umich.edu/DDI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.icpsr.umich.edu/DDI http://www.icpsr.umich.edu/DDI/Version1-2-2.xsd">
+  <docDscr>
+    <citation>
+      <titlStmt>
+        <titl>
+          Temp#1
+        </titl>
+      </titlStmt>
+      <prodStmt>
+        <prodDate date="2017-08-31">
+          2017-08-31
+        </prodDate>
+        <software version="4.0.9" date="2013-04-23">
+          Nesstar Publisher
+        </software>
+      </prodStmt>
+      <distStmt>
+        <depositr/>
+      </distStmt>
+    </citation>
+    <docSrc>
+      <titlStmt>
+        <titl>
+          Temp#1
+        </titl>
+      </titlStmt>
+      <distStmt>
+        <depositr/>
+      </distStmt>
+    </docSrc>
+  </docDscr>
+  <stdyDscr>
+    <citation>
+      <titlStmt>
+        <titl>
+          Temp#1
+        </titl>
+        <IDNo>
+          Temp1
+        </IDNo>
+      </titlStmt>
+      <prodStmt>
+        <prodDate date="2017-08-31">
+          2017-08-31
+        </prodDate>
+        <software version="4.0.9" date="2013-04-23">
+          Nesstar Publisher
+        </software>
+      </prodStmt>
+      <distStmt>
+        <depositr/>
+      </distStmt>
+    </citation>
+  </stdyDscr>
+  <fileDscr ID="F1" URI="Temp#1.~esstar?Index=0&amp;Name=da07213_useForDo_Repeat">
+    <fileTxt>
+      <fileName>
+        da07213_useForDo_Repeat.NSDstat
+      </fileName>
+      <dimensns>
+        <caseQnty>
+          1899
+        </caseQnty>
+        <varQnty>
+          5
+        </varQnty>
+      </dimensns>
+      <fileType>
+        Nesstar 200801
+      </fileType>
+    </fileTxt>
+  </fileDscr>
+  <dataDscr>
+    <var ID="V1" name="V520002" files="F1" dcml="0" intrvl="contin">
+      <location width="4"/>
+      <labl>
+        INTERVIEW NUMBER
+      </labl>
+      <valrng>
+        <range UNITS="REAL" min="1" max="3032"/>
+      </valrng>
+      <sumStat type="vald">
+        1899
+      </sumStat>
+      <sumStat type="invd">
+        0
+      </sumStat>
+      <sumStat type="min">
+        1
+      </sumStat>
+      <sumStat type="max">
+        3032
+      </sumStat>
+      <sumStat type="mean">
+        1075.749
+      </sumStat>
+      <sumStat type="stdev">
+        649.552
+      </sumStat>
+      <varFormat type="numeric" schema="other"/>
+    </var>
+    <var ID="V2" name="V520173" files="F1" dcml="0" intrvl="discrete">
+      <location width="1"/>
+      <labl>
+        READ ABOUT CMPN IN PAPER
+      </labl>
+      <valrng>
+        <range UNITS="REAL" min="1" max="5"/>
+      </valrng>
+      <invalrng>
+        <range UNITS="REAL" min="8"/>
+      </invalrng>
+      <sumStat type="vald">
+        1708
+      </sumStat>
+      <sumStat type="invd">
+        191
+      </sumStat>
+      <catgry>
+        <catValu>
+          1
+        </catValu>
+        <labl>
+          YES, QUITE A LOT, PRETTY MUCH
+        </labl>
+        <catStat type="freq">
+          667
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          2
+        </catValu>
+        <labl>
+          YES, NOT VERY MUCH
+        </labl>
+        <catStat type="freq">
+          682
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          3
+        </catValu>
+        <labl>
+          YES, NA HOW MUCH
+        </labl>
+        <catStat type="freq">
+          1
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          5
+        </catValu>
+        <labl>
+          NO
+        </labl>
+        <catStat type="freq">
+          358
+        </catStat>
+      </catgry>
+      <catgry missing="Y">
+        <catValu>
+          8
+        </catValu>
+        <labl>
+          DK
+        </labl>
+        <catStat type="freq">
+          0
+        </catStat>
+      </catgry>
+      <catgry missing="Y">
+        <catValu>
+          9
+        </catValu>
+        <labl>
+          NA, OR NO POST-ELECTION INTERVIEW (COD
+        </labl>
+        <catStat type="freq">
+          191
+        </catStat>
+      </catgry>
+      <varFormat type="numeric" schema="other"/>
+    </var>
+    <var ID="V3" name="V520174" files="F1" dcml="0" intrvl="discrete">
+      <location width="1"/>
+      <labl>
+        HEAR ABOUT CMPN ON RADIO
+      </labl>
+      <valrng>
+        <range UNITS="REAL" min="1" max="5"/>
+      </valrng>
+      <invalrng>
+        <range UNITS="REAL" min="8"/>
+      </invalrng>
+      <sumStat type="vald">
+        1708
+      </sumStat>
+      <sumStat type="invd">
+        191
+      </sumStat>
+      <catgry>
+        <catValu>
+          1
+        </catValu>
+        <labl>
+          YES, QUITE A LOT, PRETTY MUCH
+        </labl>
+        <catStat type="freq">
+          587
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          2
+        </catValu>
+        <labl>
+          YES, NOT VERY MUCH
+        </labl>
+        <catStat type="freq">
+          600
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          3
+        </catValu>
+        <labl>
+          YES, NA HOW MUCH
+        </labl>
+        <catStat type="freq">
+          5
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          5
+        </catValu>
+        <labl>
+          NO
+        </labl>
+        <catStat type="freq">
+          516
+        </catStat>
+      </catgry>
+      <catgry missing="Y">
+        <catValu>
+          8
+        </catValu>
+        <labl>
+          DK
+        </labl>
+        <catStat type="freq">
+          1
+        </catStat>
+      </catgry>
+      <catgry missing="Y">
+        <catValu>
+          9
+        </catValu>
+        <labl>
+          NA, OR NO POST-ELECTION INTERVIEW (COD
+        </labl>
+        <catStat type="freq">
+          190
+        </catStat>
+      </catgry>
+      <varFormat type="numeric" schema="other"/>
+    </var>
+    <var ID="V4" name="V520175" files="F1" dcml="0" intrvl="discrete">
+      <location width="1"/>
+      <labl>
+        SEE MUCH OF CMPN ON TV
+      </labl>
+      <valrng>
+        <range UNITS="REAL" min="1" max="5"/>
+      </valrng>
+      <invalrng>
+        <range UNITS="REAL" min="9"/>
+      </invalrng>
+      <sumStat type="vald">
+        1656
+      </sumStat>
+      <sumStat type="invd">
+        243
+      </sumStat>
+      <catgry>
+        <catValu>
+          1
+        </catValu>
+        <labl>
+          YES, QUITE A LOT, PRETTY MUCH
+        </labl>
+        <catStat type="freq">
+          534
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          2
+        </catValu>
+        <labl>
+          YES, NOT VERY MUCH
+        </labl>
+        <catStat type="freq">
+          315
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          3
+        </catValu>
+        <labl>
+          YES, NA HOW MUCH
+        </labl>
+        <catStat type="freq">
+          2
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          5
+        </catValu>
+        <labl>
+          NO
+        </labl>
+        <catStat type="freq">
+          805
+        </catStat>
+      </catgry>
+      <catgry missing="Y">
+        <catValu>
+          9
+        </catValu>
+        <labl>
+          NA, OR NO POST-ELECTION INTERVIEW (COD
+        </labl>
+        <catStat type="freq">
+          243
+        </catStat>
+      </catgry>
+      <varFormat type="numeric" schema="other"/>
+    </var>
+    <var ID="V5" name="V520176" files="F1" dcml="0" intrvl="discrete">
+      <location width="1"/>
+      <labl>
+        READ ABOUT CMPN IN MAG
+      </labl>
+      <valrng>
+        <range UNITS="REAL" min="1" max="5"/>
+      </valrng>
+      <invalrng>
+        <range UNITS="REAL" min="9"/>
+      </invalrng>
+      <sumStat type="vald">
+        1706
+      </sumStat>
+      <sumStat type="invd">
+        193
+      </sumStat>
+      <catgry>
+        <catValu>
+          1
+        </catValu>
+        <labl>
+          YES, QUITE A LOT, PRETTY MUCH
+        </labl>
+        <catStat type="freq">
+          247
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          2
+        </catValu>
+        <labl>
+          YES, NOT VERY MUCH
+        </labl>
+        <catStat type="freq">
+          438
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          3
+        </catValu>
+        <labl>
+          YES, NA HOW MUCH
+        </labl>
+        <catStat type="freq">
+          3
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          5
+        </catValu>
+        <labl>
+          NO
+        </labl>
+        <catStat type="freq">
+          1018
+        </catStat>
+      </catgry>
+      <catgry missing="Y">
+        <catValu>
+          9
+        </catValu>
+        <labl>
+          NA, OR NO POST-ELECTION INTERVIEW (COD
+        </labl>
+        <catStat type="freq">
+          193
+        </catStat>
+      </catgry>
+      <varFormat type="numeric" schema="other"/>
+    </var>
+  </dataDscr>
+</codeBook>

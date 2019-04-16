@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<decorators defaultdir="/WEB-INF/decorators">
+    <excludes>
+        <pattern>/images/*</pattern>
+         <pattern>/resources/*</pattern>
+        <pattern>/css/*</pattern>
+        <pattern>/js/*</pattern>
+        <pattern>/fonts/*</pattern>
+		<pattern>/META-INF/*</pattern>
+        <pattern>*/viewMarkupContent*</pattern>
+        <pattern>*/getBinary*</pattern>
+    </excludes>
+        
+    <decorator name="c2metadata" page="c2metadata.jsp">
+        <pattern>/*</pattern>
+    </decorator>
+
+   
+
+</decorators>

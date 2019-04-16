@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:jee="http://www.springframework.org/schema/jee" xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/mvc 
+        http://www.springframework.org/schema/mvc/spring-mvc.xsd
+        http://www.springframework.org/schema/aop
+        http://www.springframework.org/schema/aop/spring-aop.xsd
+        http://www.springframework.org/schema/tx 
+        http://www.springframework.org/schema/tx/spring-tx.xsd">
+
+	<bean id="archonnexDS" destroy-method="close"
+		class="org.apache.commons.dbcp2.BasicDataSource">
+		<property name="driverClassName" value="oracle.jdbc.driver.OracleDriver" />
+		<property name="url" value="${archonnex.oracle.jdbc.url}" />
+		<property name="username" value="${archonnex.oracle.jdbc.user}" />
+		<property name="password" value="${archonnex.oracle.jdbc.password}" />
+		<property name="initialSize" value="1" />
+		<property name="maxTotal" value="10" />
+        <property name="maxIdle" value="1" />
+		<property name="testWhileIdle" value="true" />
+		<property name="validationQuery" value="select 1 from dual" />
+		<property name="validationQueryTimeout" value="10000" />
+		<property name="fastFailValidation" value="true" />
+		<property name="testOnBorrow" value="true" />
+	</bean>
+
+	<bean id="archonnexTxManager"
+		class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="archonnexDS" />
+	</bean>
+
+	<alias name="archonnexTxManager" alias="transactionManager" />
+
+	<bean id="archonnexSessionFactory"
+		class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+		<property name="dataSource" ref="archonnexDS" />
+		<property name="packagesToScan">
+			<list>
+				<value>edu.umich.icpsr</value>
+			</list>
+		</property>
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">org.hibernate.dialect.Oracle10gDialect</prop>
+				<prop key="hibernate.show_sql">${hibernate.show.sql}</prop>
+			</props>
+		</property>
+	</bean>
+	<bean id="archonnexHibernateTemplate" class="org.springframework.orm.hibernate4.HibernateTemplate">
+		<property name="sessionFactory" ref="archonnexSessionFactory" />
+		<property name="checkWriteOperations" value="false" />
+		<property name="exposeNativeSession" value="true" />
+	</bean>
+	<bean id="archonnexJdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+		<property name="dataSource" ref="archonnexDS" />
+	</bean>
+	<bean id="archonnexDAO" class="edu.umich.icpsr.commons.dao.BusinessObjectDAO">
+		<property name="hibernateTemplate" ref="archonnexHibernateTemplate" />
+	</bean>
+	<bean id="archonnexJdbcDAO" class="edu.umich.icpsr.commons.dao.SimpleJdbcDAO">
+		<property name="jdbcTemplate" ref="archonnexJdbcTemplate" />
+	</bean>
+</beans>

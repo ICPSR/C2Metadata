@@ -1,0 +1,5052 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<codeBook version="1.2.2" ID="Temp7" xml-lang="en" xmlns="http://www.icpsr.umich.edu/DDI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.icpsr.umich.edu/DDI http://www.icpsr.umich.edu/DDI/Version1-2-2.xsd">
+  <docDscr>
+    <citation>
+      <titlStmt>
+        <titl>
+          Temp#7
+        </titl>
+      </titlStmt>
+      <prodStmt>
+        <prodDate date="2018-04-17">
+          2018-04-17
+        </prodDate>
+        <software version="4.0.9" date="2013-04-23">
+          Nesstar Publisher
+        </software>
+      </prodStmt>
+      <distStmt>
+        <depositr/>
+      </distStmt>
+    </citation>
+    <docSrc>
+      <titlStmt>
+        <titl>
+          Temp#7
+        </titl>
+      </titlStmt>
+      <distStmt>
+        <depositr/>
+      </distStmt>
+    </docSrc>
+  </docDscr>
+  <stdyDscr>
+    <citation>
+      <titlStmt>
+        <titl>
+          ANES Time Series Cumulative Data File (1948-2012)
+        </titl>
+        <IDNo>
+          Temp7
+        </IDNo>
+      </titlStmt>
+      <rspStmt>
+        <AuthEnty>
+          American National Election Studies
+        </AuthEnty>
+        <AuthEnty>
+          Stanford University
+        </AuthEnty>
+      </rspStmt>
+      <prodStmt>
+        <prodDate date="2018-04-17">
+          2018-04-17
+        </prodDate>
+        <software version="4.0.9" date="2013-04-23">
+          Nesstar Publisher
+        </software>
+      </prodStmt>
+      <distStmt>
+        <depositr/>
+      </distStmt>
+    </citation>
+  </stdyDscr>
+  <fileDscr ID="F1" URI="Temp#7.~esstar?Index=0&amp;Name=08475-0001-Data-C2M">
+    <fileTxt>
+      <fileName>
+        08475-0001-Data-C2M.NSDstat
+      </fileName>
+      <dimensns>
+        <caseQnty>
+          55674
+        </caseQnty>
+        <varQnty>
+          43
+        </varQnty>
+      </dimensns>
+      <fileType>
+        Nesstar 200801
+      </fileType>
+    </fileTxt>
+  </fileDscr>
+  <dataDscr>
+    <var ID="V1" name="CASEID" files="F1" dcml="0" intrvl="contin">
+      <location width="5"/>
+      <labl>
+        ICPSR SEQUENTIAL RECORD IDENTIFIER
+      </labl>
+      <valrng>
+        <range min="1" max="55674"/>
+      </valrng>
+      <sumStat type="vald">
+        55674
+      </sumStat>
+      <sumStat type="invd">
+        0
+      </sumStat>
+      <sumStat type="min">
+        1
+      </sumStat>
+      <sumStat type="max">
+        55674
+      </sumStat>
+      <sumStat type="mean">
+        27837.5
+      </sumStat>
+      <sumStat type="stdev">
+        16071.844
+      </sumStat>
+      <varFormat type="numeric" schema="other"/>
+    </var>
+    <var ID="V2" name="VCF0004" files="F1" dcml="0" intrvl="contin">
+      <location width="4"/>
+      <labl>
+        STUDY VARIABLE: Year of Study
+      </labl>
+      <valrng>
+        <range min="1948" max="2012"/>
+      </valrng>
+      <sumStat type="vald">
+        55674
+      </sumStat>
+      <sumStat type="invd">
+        0
+      </sumStat>
+      <sumStat type="min">
+        1948
+      </sumStat>
+      <sumStat type="max">
+        2012
+      </sumStat>
+      <sumStat type="mean">
+        1983.097
+      </sumStat>
+      <sumStat type="stdev">
+        18.159
+      </sumStat>
+      <varFormat type="numeric" schema="other"/>
+    </var>
+    <var ID="V3" name="VCF0101" files="F1" dcml="0" intrvl="contin">
+      <location width="2"/>
+      <labl>
+        DEMOGRAPHICS: Respondent - Age
+      </labl>
+      <valrng>
+        <range min="17" max="99"/>
+      </valrng>
+      <invalrng>
+        <item VALUE="0"/>
+      </invalrng>
+      <sumStat type="vald">
+        53455
+      </sumStat>
+      <sumStat type="invd">
+        2219
+      </sumStat>
+      <sumStat type="min">
+        17
+      </sumStat>
+      <sumStat type="max">
+        99
+      </sumStat>
+      <catgry>
+        <catValu>
+          97
+        </catValu>
+        <labl>
+          97. 97 years old (1952, 1974, 1996 and later: or older)
+        </labl>
+        <catStat type="freq">
+          2
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          98
+        </catValu>
+        <labl>
+          98. 98 years old (1958-1962, 1966, 1968: or older)
+        </labl>
+        <catStat type="freq">
+          2
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          99
+        </catValu>
+        <labl>
+          99. 99 years old (1976-1990,1994,2002: or older)
+        </labl>
+        <catStat type="freq">
+          4
+        </catStat>
+      </catgry>
+      <catgry missing="Y">
+        <catValu>
+          0
+        </catValu>
+        <labl>
+          00. NA; DK; RF; no Pre IW
+        </labl>
+        <catStat type="freq">
+          418
+        </catStat>
+      </catgry>
+      <varFormat type="numeric" schema="other"/>
+    </var>
+    <var ID="V4" name="VCF0102" files="F1" dcml="0" intrvl="discrete">
+      <location width="1"/>
+      <labl>
+        DEMOGRAPHICS: Respondent - Age Group
+      </labl>
+      <valrng>
+        <range min="1" max="7"/>
+      </valrng>
+      <invalrng>
+        <item VALUE="0"/>
+      </invalrng>
+      <sumStat type="vald">
+        55241
+      </sumStat>
+      <sumStat type="invd">
+        433
+      </sumStat>
+      <catgry>
+        <catValu>
+          1
+        </catValu>
+        <labl>
+          1. 17 - 24
+        </labl>
+        <catStat type="freq">
+          5302
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          2
+        </catValu>
+        <labl>
+          2. 25 - 34
+        </labl>
+        <catStat type="freq">
+          11531
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          3
+        </catValu>
+        <labl>
+          3. 35 - 44
+        </labl>
+        <catStat type="freq">
+          11183
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          4
+        </catValu>
+        <labl>
+          4. 45 - 54
+        </labl>
+        <catStat type="freq">
+          9418
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          5
+        </catValu>
+        <labl>
+          5. 55 - 64
+        </labl>
+        <catStat type="freq">
+          8153
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          6
+        </catValu>
+        <labl>
+          6. 65 - 74
+        </labl>
+        <catStat type="freq">
+          6164
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          7
+        </catValu>
+        <labl>
+          7. 75 - 99 and over (except 1954)
+        </labl>
+        <catStat type="freq">
+          3490
+        </catStat>
+      </catgry>
+      <catgry missing="Y">
+        <catValu>
+          0
+        </catValu>
+        <labl>
+          0. NA; DK; RF; no Pre IW
+        </labl>
+        <catStat type="freq">
+          433
+        </catStat>
+      </catgry>
+      <varFormat type="numeric" schema="other"/>
+    </var>
+    <var ID="V5" name="VCF0103" files="F1" dcml="0" intrvl="discrete">
+      <location width="1"/>
+      <labl>
+        DEMOGRAPHICS: Respondent - Cohort
+      </labl>
+      <valrng>
+        <range min="1" max="8"/>
+      </valrng>
+      <invalrng>
+        <item VALUE="0"/>
+      </invalrng>
+      <sumStat type="vald">
+        55210
+      </sumStat>
+      <sumStat type="invd">
+        464
+      </sumStat>
+      <catgry>
+        <catValu>
+          1
+        </catValu>
+        <labl>
+          1. 1991 - present
+        </labl>
+        <catStat type="freq">
+          242
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          2
+        </catValu>
+        <labl>
+          2. 1975 - 1990
+        </labl>
+        <catStat type="freq">
+          2750
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          3
+        </catValu>
+        <labl>
+          3. 1959 - 1974
+        </labl>
+        <catStat type="freq">
+          8050
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          4
+        </catValu>
+        <labl>
+          4. 1943 - 1958
+        </labl>
+        <catStat type="freq">
+          13718
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          5
+        </catValu>
+        <labl>
+          5. 1927 - 1942
+        </labl>
+        <catStat type="freq">
+          10962
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          6
+        </catValu>
+        <labl>
+          6. 1911 - 1926
+        </labl>
+        <catStat type="freq">
+          11116
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          7
+        </catValu>
+        <labl>
+          7. 1895 - 1910
+        </labl>
+        <catStat type="freq">
+          6169
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          8
+        </catValu>
+        <labl>
+          8. Before 1895
+        </labl>
+        <catStat type="freq">
+          2203
+        </catStat>
+      </catgry>
+      <catgry missing="Y">
+        <catValu>
+          0
+        </catValu>
+        <labl>
+          0. NA; DK; RF; no Pre IW
+        </labl>
+        <catStat type="freq">
+          464
+        </catStat>
+      </catgry>
+      <varFormat type="numeric" schema="other"/>
+    </var>
+    <var ID="V6" name="VCF0104" files="F1" dcml="0" intrvl="discrete">
+      <location width="1"/>
+      <labl>
+        DEMOGRAPHICS: Respondent - Gender
+      </labl>
+      <valrng>
+        <range min="1" max="2"/>
+      </valrng>
+      <invalrng>
+        <item VALUE="0"/>
+      </invalrng>
+      <sumStat type="vald">
+        55571
+      </sumStat>
+      <sumStat type="invd">
+        103
+      </sumStat>
+      <catgry>
+        <catValu>
+          1
+        </catValu>
+        <labl>
+          1. Male
+        </labl>
+        <catStat type="freq">
+          24862
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          2
+        </catValu>
+        <labl>
+          2. Female
+        </labl>
+        <catStat type="freq">
+          30709
+        </catStat>
+      </catgry>
+      <catgry missing="Y">
+        <catValu>
+          0
+        </catValu>
+        <labl>
+          0. NA; no Pre IW
+        </labl>
+        <catStat type="freq">
+          103
+        </catStat>
+      </catgry>
+      <varFormat type="numeric" schema="other"/>
+    </var>
+    <var ID="V7" name="VCF0106" files="F1" dcml="0" intrvl="discrete">
+      <location width="1"/>
+      <labl>
+        Race summary, 3 categories
+      </labl>
+      <valrng>
+        <range min="1" max="3"/>
+      </valrng>
+      <invalrng>
+        <item VALUE="9"/>
+        <item VALUE="0"/>
+      </invalrng>
+      <sumStat type="vald">
+        54112
+      </sumStat>
+      <sumStat type="invd">
+        1562
+      </sumStat>
+      <catgry>
+        <catValu>
+          1
+        </catValu>
+        <labl>
+          1. White non-Hispanic
+        </labl>
+        <catStat type="freq">
+          42997
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          2
+        </catValu>
+        <labl>
+          2. Black non-Hispanic
+        </labl>
+        <catStat type="freq">
+          6509
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          3
+        </catValu>
+        <labl>
+          3. Other
+        </labl>
+        <catStat type="freq">
+          4606
+        </catStat>
+      </catgry>
+      <catgry missing="Y">
+        <catValu>
+          0
+        </catValu>
+        <labl>
+          0. Missing, pre-1966 data
+        </labl>
+        <catStat type="freq">
+          55
+        </catStat>
+      </catgry>
+      <catgry missing="Y">
+        <catValu>
+          9
+        </catValu>
+        <labl>
+          9. DK; NA; no Pre IW; short-form "new" Cross Section or Span
+        </labl>
+        <catStat type="freq">
+          368
+        </catStat>
+      </catgry>
+      <catgry missing="Y">
+        <catValu>
+          Sysmiss
+        </catValu>
+        <catStat type="freq">
+          1139
+        </catStat>
+      </catgry>
+      <varFormat type="numeric" schema="other"/>
+    </var>
+    <var ID="V8" name="VCF0107" files="F1" dcml="0" intrvl="discrete">
+      <location width="1"/>
+      <labl>
+        DEMOGRAPHICS: Respondent - Hispanic Origin Type
+      </labl>
+      <valrng>
+        <range min="1" max="7"/>
+      </valrng>
+      <invalrng>
+        <item VALUE="8"/>
+        <item VALUE="9"/>
+        <item VALUE="0"/>
+      </invalrng>
+      <sumStat type="vald">
+        33432
+      </sumStat>
+      <sumStat type="invd">
+        22242
+      </sumStat>
+      <catgry>
+        <catValu>
+          1
+        </catValu>
+        <labl>
+          1. Yes, Mexican-American, Chicano
+        </labl>
+        <catStat type="freq">
+          1809
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          2
+        </catValu>
+        <labl>
+          2. Yes, Puerto Rican
+        </labl>
+        <catStat type="freq">
+          367
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          3
+        </catValu>
+        <labl>
+          3. Yes, other Hispanic
+        </labl>
+        <catStat type="freq">
+          1059
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          4
+        </catValu>
+        <labl>
+          4. Yes, Hispanic but DK/NA type
+        </labl>
+        <catStat type="freq">
+          60
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          7
+        </catValu>
+        <labl>
+          7. No, not Hispanic
+        </labl>
+        <catStat type="freq">
+          30137
+        </catStat>
+      </catgry>
+      <catgry missing="Y">
+        <catValu>
+          0
+        </catValu>
+        <labl>
+          0. Short-form 'new' Cross Section (1992)
+        </labl>
+        <catStat type="freq">
+          4
+        </catStat>
+      </catgry>
+      <catgry missing="Y">
+        <catValu>
+          8
+        </catValu>
+        <labl>
+          8. DK if Hispanic
+        </labl>
+        <catStat type="freq">
+          105
+        </catStat>
+      </catgry>
+      <catgry missing="Y">
+        <catValu>
+          9
+        </catValu>
+        <labl>
+          9. NA if Hispanic
+        </labl>
+        <catStat type="freq">
+          289
+        </catStat>
+      </catgry>
+      <catgry missing="Y">
+        <catValu>
+          Sysmiss
+        </catValu>
+        <catStat type="freq">
+          21844
+        </catStat>
+      </catgry>
+      <varFormat type="numeric" schema="other"/>
+    </var>
+    <var ID="V9" name="VCF0109" files="F1" dcml="0" intrvl="discrete">
+      <location width="3"/>
+      <labl>
+        DEMOGRAPHICS: Respondent - Ethnicity
+      </labl>
+      <valrng>
+        <range min="10" max="876"/>
+      </valrng>
+      <invalrng>
+        <item VALUE="877"/>
+        <item VALUE="888"/>
+        <item VALUE="0"/>
+      </invalrng>
+      <sumStat type="vald">
+        22322
+      </sumStat>
+      <sumStat type="invd">
+        33352
+      </sumStat>
+      <catgry>
+        <catValu>
+          10
+        </catValu>
+        <labl>
+          American Indian or Native American; tribal mentions
+        </labl>
+        <catStat type="freq">
+          812
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          20
+        </catValu>
+        <labl>
+          Canadian; not specified as French-Canadian (03)
+        </labl>
+        <catStat type="freq">
+          67
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          30
+        </catValu>
+        <labl>
+          Canadian, of French origin
+        </labl>
+        <catStat type="freq">
+          130
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          40
+        </catValu>
+        <labl>
+          Mexican (excluding explicit mention of "Chicano", "Mexican-A
+        </labl>
+        <catStat type="freq">
+          576
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          50
+        </catValu>
+        <labl>
+          Central American
+        </labl>
+        <catStat type="freq">
+          50
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          70
+        </catValu>
+        <labl>
+          Barbados
+        </labl>
+        <catStat type="freq">
+          4
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          80
+        </catValu>
+        <labl>
+          Cuban
+        </labl>
+        <catStat type="freq">
+          75
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          90
+        </catValu>
+        <labl>
+          Dominican Republic
+        </labl>
+        <catStat type="freq">
+          17
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          100
+        </catValu>
+        <labl>
+          Haitian
+        </labl>
+        <catStat type="freq">
+          2
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          110
+        </catValu>
+        <labl>
+          Jamaican
+        </labl>
+        <catStat type="freq">
+          20
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          120
+        </catValu>
+        <labl>
+          Puerto Rican
+        </labl>
+        <catStat type="freq">
+          148
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          130
+        </catValu>
+        <labl>
+          West Indian--not from one of the above countries
+        </labl>
+        <catStat type="freq">
+          8
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          140
+        </catValu>
+        <labl>
+          West Indian--NA which country
+        </labl>
+        <catStat type="freq">
+          20
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          160
+        </catValu>
+        <labl>
+          South American--any country
+        </labl>
+        <catStat type="freq">
+          47
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          180
+        </catValu>
+        <labl>
+          English, British
+        </labl>
+        <catStat type="freq">
+          1956
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          190
+        </catValu>
+        <labl>
+          Irish (not specified as from Northern Ireland, Ulster--22)
+        </labl>
+        <catStat type="freq">
+          2395
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          200
+        </catValu>
+        <labl>
+          Scottish
+        </labl>
+        <catStat type="freq">
+          423
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          210
+        </catValu>
+        <labl>
+          Welsh
+        </labl>
+        <catStat type="freq">
+          87
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          220
+        </catValu>
+        <labl>
+          From Northern Ireland (Ulster)
+        </labl>
+        <catStat type="freq">
+          3
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          230
+        </catValu>
+        <labl>
+          Scot-Irish
+        </labl>
+        <catStat type="freq">
+          193
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          240
+        </catValu>
+        <labl>
+          From British Isles; from two or more countries of the Britis
+        </labl>
+        <catStat type="freq">
+          262
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          260
+        </catValu>
+        <labl>
+          Austrian
+        </labl>
+        <catStat type="freq">
+          40
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          270
+        </catValu>
+        <labl>
+          Belgian
+        </labl>
+        <catStat type="freq">
+          23
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          280
+        </catValu>
+        <labl>
+          French
+        </labl>
+        <catStat type="freq">
+          519
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          290
+        </catValu>
+        <labl>
+          German; also Pennsylvania Dutch
+        </labl>
+        <catStat type="freq">
+          3575
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          300
+        </catValu>
+        <labl>
+          Luxembourg
+        </labl>
+        <catStat type="freq">
+          8
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          310
+        </catValu>
+        <labl>
+          Netherlands, Holland; Dutch
+        </labl>
+        <catStat type="freq">
+          363
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          320
+        </catValu>
+        <labl>
+          Swiss
+        </labl>
+        <catStat type="freq">
+          59
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          330
+        </catValu>
+        <labl>
+          From Western Europe; two or more countries of Western Europe
+        </labl>
+        <catStat type="freq">
+          130
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          350
+        </catValu>
+        <labl>
+          Danish
+        </labl>
+        <catStat type="freq">
+          125
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          360
+        </catValu>
+        <labl>
+          Finn, Finnish
+        </labl>
+        <catStat type="freq">
+          51
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          370
+        </catValu>
+        <labl>
+          Norwegian
+        </labl>
+        <catStat type="freq">
+          328
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          380
+        </catValu>
+        <labl>
+          Swedish
+        </labl>
+        <catStat type="freq">
+          295
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          390
+        </catValu>
+        <labl>
+          Icelander
+        </labl>
+        <catStat type="freq">
+          4
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          400
+        </catValu>
+        <labl>
+          Scandinavian; reference to two or more Scandinavian countrie
+        </labl>
+        <catStat type="freq">
+          132
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          410
+        </catValu>
+        <labl>
+          Reference to two or more countries from combination of the f
+        </labl>
+        <catStat type="freq">
+          334
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          430
+        </catValu>
+        <labl>
+          Czechoslovakian, Slavic
+        </labl>
+        <catStat type="freq">
+          231
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          431
+        </catValu>
+        <labl>
+          Slovakian (specific)
+        </labl>
+        <catStat type="freq">
+          0
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          432
+        </catValu>
+        <labl>
+          Czech (specific); Bohemian (part of Czech Republic)
+        </labl>
+        <catStat type="freq">
+          11
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          433
+        </catValu>
+        <labl>
+          Slovenian
+        </labl>
+        <catStat type="freq">
+          1
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          440
+        </catValu>
+        <labl>
+          Estonian
+        </labl>
+        <catStat type="freq">
+          6
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          450
+        </catValu>
+        <labl>
+          Hungarian
+        </labl>
+        <catStat type="freq">
+          117
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          460
+        </catValu>
+        <labl>
+          Latvian
+        </labl>
+        <catStat type="freq">
+          7
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          470
+        </catValu>
+        <labl>
+          Lithuanian
+        </labl>
+        <catStat type="freq">
+          53
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          480
+        </catValu>
+        <labl>
+          Polish
+        </labl>
+        <catStat type="freq">
+          640
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          490
+        </catValu>
+        <labl>
+          Russian; from U.S.S.R.
+        </labl>
+        <catStat type="freq">
+          119
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          500
+        </catValu>
+        <labl>
+          Ukrainian
+        </labl>
+        <catStat type="freq">
+          43
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          510
+        </catValu>
+        <labl>
+          Eastern Europe; reference to two or more countries of Easter
+        </labl>
+        <catStat type="freq">
+          31
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          530
+        </catValu>
+        <labl>
+          Albanian
+        </labl>
+        <catStat type="freq">
+          1
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          540
+        </catValu>
+        <labl>
+          Bulgarian
+        </labl>
+        <catStat type="freq">
+          4
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          550
+        </catValu>
+        <labl>
+          Greek
+        </labl>
+        <catStat type="freq">
+          99
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          560
+        </catValu>
+        <labl>
+          Rumanian
+        </labl>
+        <catStat type="freq">
+          5
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          570
+        </catValu>
+        <labl>
+          Yugoslavian
+        </labl>
+        <catStat type="freq">
+          81
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          580
+        </catValu>
+        <labl>
+          Croatian
+        </labl>
+        <catStat type="freq">
+          2
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          581
+        </catValu>
+        <labl>
+          Serbian
+        </labl>
+        <catStat type="freq">
+          1
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          582
+        </catValu>
+        <labl>
+          Bosnian
+        </labl>
+        <catStat type="freq">
+          0
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          590
+        </catValu>
+        <labl>
+          Mention of two or more Balkan Countries
+        </labl>
+        <catStat type="freq">
+          8
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          600
+        </catValu>
+        <labl>
+          Italian
+        </labl>
+        <catStat type="freq">
+          1189
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          610
+        </catValu>
+        <labl>
+          Portugese
+        </labl>
+        <catStat type="freq">
+          64
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          620
+        </catValu>
+        <labl>
+          Spanish
+        </labl>
+        <catStat type="freq">
+          195
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          630
+        </catValu>
+        <labl>
+          Maltese
+        </labl>
+        <catStat type="freq">
+          2
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          640
+        </catValu>
+        <labl>
+          European; general mention of Europe; reference to two or mor
+        </labl>
+        <catStat type="freq">
+          241
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          650
+        </catValu>
+        <labl>
+          Pakistani
+        </labl>
+        <catStat type="freq">
+          5
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          660
+        </catValu>
+        <labl>
+          Afghan
+        </labl>
+        <catStat type="freq">
+          3
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          670
+        </catValu>
+        <labl>
+          Indian (not American Indian, code 01)
+        </labl>
+        <catStat type="freq">
+          72
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          680
+        </catValu>
+        <labl>
+          Southeast Asia--from Indochina, Thailand, Malaya, Burma, Phi
+        </labl>
+        <catStat type="freq">
+          101
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          690
+        </catValu>
+        <labl>
+          Chinese
+        </labl>
+        <catStat type="freq">
+          48
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          700
+        </catValu>
+        <labl>
+          Japanese; Japanese American
+        </labl>
+        <catStat type="freq">
+          54
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          710
+        </catValu>
+        <labl>
+          Korean
+        </labl>
+        <catStat type="freq">
+          36
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          720
+        </catValu>
+        <labl>
+          Asian
+        </labl>
+        <catStat type="freq">
+          25
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          730
+        </catValu>
+        <labl>
+          Egyptian
+        </labl>
+        <catStat type="freq">
+          2
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          740
+        </catValu>
+        <labl>
+          Iranian, Persian
+        </labl>
+        <catStat type="freq">
+          10
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          750
+        </catValu>
+        <labl>
+          Iraqi
+        </labl>
+        <catStat type="freq">
+          3
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          760
+        </catValu>
+        <labl>
+          Israeli
+        </labl>
+        <catStat type="freq">
+          114
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          770
+        </catValu>
+        <labl>
+          Jordanian
+        </labl>
+        <catStat type="freq">
+          3
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          780
+        </catValu>
+        <labl>
+          Lebanese
+        </labl>
+        <catStat type="freq">
+          32
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          790
+        </catValu>
+        <labl>
+          Arab, Arabian, Saudi Arabian
+        </labl>
+        <catStat type="freq">
+          4
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          800
+        </catValu>
+        <labl>
+          Syrian
+        </labl>
+        <catStat type="freq">
+          7
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          810
+        </catValu>
+        <labl>
+          Turk, Turkish
+        </labl>
+        <catStat type="freq">
+          5
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          820
+        </catValu>
+        <labl>
+          Armenian
+        </labl>
+        <catStat type="freq">
+          19
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          825
+        </catValu>
+        <catStat type="freq">
+          1
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          830
+        </catValu>
+        <labl>
+          African; from any African country excluding only Egypt (U.A.
+        </labl>
+        <catStat type="freq">
+          259
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          840
+        </catValu>
+        <labl>
+          South Pacific Islander other than 850 (incl native Hawaiian)
+        </labl>
+        <catStat type="freq">
+          6
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          850
+        </catValu>
+        <labl>
+          Australian, New Zealander, Tasmanian
+        </labl>
+        <catStat type="freq">
+          4
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          860
+        </catValu>
+        <labl>
+          White, Caucasian
+        </labl>
+        <catStat type="freq">
+          1077
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          861
+        </catValu>
+        <labl>
+          "Anglo"
+        </labl>
+        <catStat type="freq">
+          5
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          862
+        </catValu>
+        <labl>
+          Black; Negro; American Black; African American
+        </labl>
+        <catStat type="freq">
+          2606
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          863
+        </catValu>
+        <labl>
+          Chicano; Mexican-American; Hispanic; Latin American
+        </labl>
+        <catStat type="freq">
+          793
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          864
+        </catValu>
+        <labl>
+          Asian-American (exc. specifically Japanese American, 700)
+        </labl>
+        <catStat type="freq">
+          6
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          865
+        </catValu>
+        <catStat type="freq">
+          3
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          869
+        </catValu>
+        <catStat type="freq">
+          3
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          870
+        </catValu>
+        <labl>
+          Catholic
+        </labl>
+        <catStat type="freq">
+          2
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          871
+        </catValu>
+        <labl>
+          Protestant
+        </labl>
+        <catStat type="freq">
+          4
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          872
+        </catValu>
+        <labl>
+          Jewish
+        </labl>
+        <catStat type="freq">
+          273
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          873
+        </catValu>
+        <labl>
+          Other religious groups
+        </labl>
+        <catStat type="freq">
+          12
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          874
+        </catValu>
+        <labl>
+          Other group; combinations not codeable above
+        </labl>
+        <catStat type="freq">
+          286
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          876
+        </catValu>
+        <catStat type="freq">
+          7
+        </catStat>
+      </catgry>
+      <catgry missing="Y">
+        <catValu>
+          0
+        </catValu>
+        <labl>
+          000. Short-form 'new' Cross Section (1992)
+        </labl>
+        <catStat type="freq">
+          4
+        </catStat>
+      </catgry>
+      <catgry missing="Y">
+        <catValu>
+          877
+        </catValu>
+        <labl>
+          "American"; "Just American"; none; neither (response to "cho
+        </labl>
+        <catStat type="freq">
+          7442
+        </catStat>
+      </catgry>
+      <catgry missing="Y">
+        <catValu>
+          888
+        </catValu>
+        <labl>
+          DK
+        </labl>
+        <catStat type="freq">
+          861
+        </catStat>
+      </catgry>
+      <catgry missing="Y">
+        <catValu>
+          Sysmiss
+        </catValu>
+        <catStat type="freq">
+          25045
+        </catStat>
+      </catgry>
+      <varFormat type="numeric" schema="other"/>
+    </var>
+    <var ID="V10" name="VCF0114" files="F1" dcml="0" intrvl="discrete">
+      <location width="1"/>
+      <labl>
+        DEMOGRAPHICS: Respondent Family - Income Group
+      </labl>
+      <valrng>
+        <range min="1" max="5"/>
+      </valrng>
+      <invalrng>
+        <item VALUE="0"/>
+      </invalrng>
+      <sumStat type="vald">
+        50338
+      </sumStat>
+      <sumStat type="invd">
+        5336
+      </sumStat>
+      <catgry>
+        <catValu>
+          1
+        </catValu>
+        <labl>
+          1. 0 to 16 percentile
+        </labl>
+        <catStat type="freq">
+          8793
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          2
+        </catValu>
+        <labl>
+          2. 17 to 33 percentile
+        </labl>
+        <catStat type="freq">
+          8399
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          3
+        </catValu>
+        <labl>
+          3. 34 to 67 percentile
+        </labl>
+        <catStat type="freq">
+          16607
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          4
+        </catValu>
+        <labl>
+          4. 68 to 95 percentile
+        </labl>
+        <catStat type="freq">
+          13849
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          5
+        </catValu>
+        <labl>
+          5. 96 to 100 percentile
+        </labl>
+        <catStat type="freq">
+          2690
+        </catStat>
+      </catgry>
+      <catgry missing="Y">
+        <catValu>
+          0
+        </catValu>
+        <labl>
+          0. DK; NA; refused to answer; no Pre IW
+        </labl>
+        <catStat type="freq">
+          3825
+        </catStat>
+      </catgry>
+      <catgry missing="Y">
+        <catValu>
+          Sysmiss
+        </catValu>
+        <catStat type="freq">
+          1511
+        </catStat>
+      </catgry>
+      <varFormat type="numeric" schema="other"/>
+    </var>
+    <var ID="V11" name="VCF0130" files="F1" dcml="0" intrvl="discrete">
+      <location width="1"/>
+      <labl>
+        DEMOGRAPHICS: Respondent - Church Attendance 1970-
+      </labl>
+      <valrng>
+        <range min="1" max="7"/>
+      </valrng>
+      <invalrng>
+        <item VALUE="8"/>
+        <item VALUE="9"/>
+        <item VALUE="0"/>
+      </invalrng>
+      <sumStat type="vald">
+        41429
+      </sumStat>
+      <sumStat type="invd">
+        14245
+      </sumStat>
+      <catgry>
+        <catValu>
+          1
+        </catValu>
+        <labl>
+          1. Every week (Except 1970: almost every week)
+        </labl>
+        <catStat type="freq">
+          10773
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          2
+        </catValu>
+        <labl>
+          2. Almost every week (no cases in 1970)
+        </labl>
+        <catStat type="freq">
+          4652
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          3
+        </catValu>
+        <labl>
+          3. Once or twice a month
+        </labl>
+        <catStat type="freq">
+          5513
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          4
+        </catValu>
+        <labl>
+          4. A few times a year
+        </labl>
+        <catStat type="freq">
+          9020
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          5
+        </catValu>
+        <labl>
+          5. Never (1990 and later: 'No' in filter)
+        </labl>
+        <catStat type="freq">
+          10076
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          7
+        </catValu>
+        <labl>
+          7. No religious preference (1970-1988)
+        </labl>
+        <catStat type="freq">
+          1395
+        </catStat>
+      </catgry>
+      <catgry missing="Y">
+        <catValu>
+          0
+        </catValu>
+        <labl>
+          0. INAP religion (1970-1988); atheists and agnostics are
+        </labl>
+        <catStat type="freq">
+          180
+        </catStat>
+      </catgry>
+      <catgry missing="Y">
+        <catValu>
+          8
+        </catValu>
+        <labl>
+          8. DK how often/DK if attend
+        </labl>
+        <catStat type="freq">
+          21
+        </catStat>
+      </catgry>
+      <catgry missing="Y">
+        <catValu>
+          9
+        </catValu>
+        <labl>
+          9. NA/RF how often/NA/RF if attend
+        </labl>
+        <catStat type="freq">
+          235
+        </catStat>
+      </catgry>
+      <catgry missing="Y">
+        <catValu>
+          Sysmiss
+        </catValu>
+        <catStat type="freq">
+          13809
+        </catStat>
+      </catgry>
+      <varFormat type="numeric" schema="other"/>
+    </var>
+    <var ID="V12" name="VCF0130A" files="F1" dcml="0" intrvl="discrete">
+      <location width="1"/>
+      <labl>
+        DEMOGRAPHICS: Respondent - Church Attendance 1990-
+      </labl>
+      <valrng>
+        <range min="0" max="5"/>
+      </valrng>
+      <invalrng>
+        <item VALUE="8"/>
+        <item VALUE="9"/>
+      </invalrng>
+      <sumStat type="vald">
+        21865
+      </sumStat>
+      <sumStat type="invd">
+        33809
+      </sumStat>
+      <catgry>
+        <catValu>
+          0
+        </catValu>
+        <labl>
+          0. Every week - more than once a week
+        </labl>
+        <catStat type="freq">
+          2548
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          1
+        </catValu>
+        <labl>
+          1. Every week - once a week or NA if once a week/more
+        </labl>
+        <catStat type="freq">
+          2958
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          2
+        </catValu>
+        <labl>
+          2. Almost every week
+        </labl>
+        <catStat type="freq">
+          2540
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          3
+        </catValu>
+        <labl>
+          3. Once or twice a month
+        </labl>
+        <catStat type="freq">
+          2965
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          4
+        </catValu>
+        <labl>
+          4. A few times a year
+        </labl>
+        <catStat type="freq">
+          3318
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          5
+        </catValu>
+        <labl>
+          5. Never ('No' in filter)
+        </labl>
+        <catStat type="freq">
+          7536
+        </catStat>
+      </catgry>
+      <catgry missing="Y">
+        <catValu>
+          8
+        </catValu>
+        <labl>
+          8. DK how often/DK if attend
+        </labl>
+        <catStat type="freq">
+          17
+        </catStat>
+      </catgry>
+      <catgry missing="Y">
+        <catValu>
+          9
+        </catValu>
+        <labl>
+          9. NA how often/NA if attend; short-form 'new'
+        </labl>
+        <catStat type="freq">
+          139
+        </catStat>
+      </catgry>
+      <catgry missing="Y">
+        <catValu>
+          Sysmiss
+        </catValu>
+        <catStat type="freq">
+          33653
+        </catStat>
+      </catgry>
+      <varFormat type="numeric" schema="other"/>
+    </var>
+    <var ID="V13" name="VCF0131" files="F1" dcml="0" intrvl="discrete">
+      <location width="1"/>
+      <labl>
+        DEMOGRAPHICS: Respondent - Church Attendance 1952-1968
+      </labl>
+      <valrng>
+        <range min="1" max="7"/>
+      </valrng>
+      <invalrng>
+        <item VALUE="9"/>
+        <item VALUE="0"/>
+      </invalrng>
+      <sumStat type="vald">
+        11615
+      </sumStat>
+      <sumStat type="invd">
+        44059
+      </sumStat>
+      <catgry>
+        <catValu>
+          1
+        </catValu>
+        <labl>
+          1. Regularly
+        </labl>
+        <catStat type="freq">
+          4896
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          2
+        </catValu>
+        <labl>
+          2. Often
+        </labl>
+        <catStat type="freq">
+          2009
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          4
+        </catValu>
+        <labl>
+          4. Seldom
+        </labl>
+        <catStat type="freq">
+          3757
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          5
+        </catValu>
+        <labl>
+          5. Never
+        </labl>
+        <catStat type="freq">
+          774
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          7
+        </catValu>
+        <labl>
+          7. No religious preference (1960-1968)
+        </labl>
+        <catStat type="freq">
+          179
+        </catStat>
+      </catgry>
+      <catgry missing="Y">
+        <catValu>
+          0
+        </catValu>
+        <labl>
+          0. Religion refused/NA; no Pre IW; no Post IW
+        </labl>
+        <catStat type="freq">
+          1805
+        </catStat>
+      </catgry>
+      <catgry missing="Y">
+        <catValu>
+          9
+        </catValu>
+        <labl>
+          9. NA
+        </labl>
+        <catStat type="freq">
+          99
+        </catStat>
+      </catgry>
+      <catgry missing="Y">
+        <catValu>
+          Sysmiss
+        </catValu>
+        <catStat type="freq">
+          42155
+        </catStat>
+      </catgry>
+      <varFormat type="numeric" schema="other"/>
+    </var>
+    <var ID="V14" name="VCF0140" files="F1" dcml="0" intrvl="discrete">
+      <location width="1"/>
+      <labl>
+        DEMOGRAPHICS: Respondent - Education 6-category
+      </labl>
+      <valrng>
+        <range min="1" max="6"/>
+      </valrng>
+      <invalrng>
+        <item VALUE="8"/>
+        <item VALUE="9"/>
+      </invalrng>
+      <sumStat type="vald">
+        54464
+      </sumStat>
+      <sumStat type="invd">
+        1210
+      </sumStat>
+      <catgry>
+        <catValu>
+          1
+        </catValu>
+        <labl>
+          1. 8 grades or less ('grade school')
+        </labl>
+        <catStat type="freq">
+          7766
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          2
+        </catValu>
+        <labl>
+          2. 9-12 grades ('high school'), no diploma/equivalency
+        </labl>
+        <catStat type="freq">
+          7396
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          3
+        </catValu>
+        <labl>
+          3. 12 grades, diploma or equivalency
+        </labl>
+        <catStat type="freq">
+          13617
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          4
+        </catValu>
+        <labl>
+          4. 12 grades, diploma or equivalency plus non-academic
+        </labl>
+        <catStat type="freq">
+          3894
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          5
+        </catValu>
+        <labl>
+          5. Some college, no degree; junior/community college
+        </labl>
+        <catStat type="freq">
+          11415
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          6
+        </catValu>
+        <labl>
+          6. BA level degrees; advanced degrees incl. LLB
+        </labl>
+        <catStat type="freq">
+          10376
+        </catStat>
+      </catgry>
+      <catgry missing="Y">
+        <catValu>
+          8
+        </catValu>
+        <labl>
+          8. DK
+        </labl>
+        <catStat type="freq">
+          26
+        </catStat>
+      </catgry>
+      <catgry missing="Y">
+        <catValu>
+          9
+        </catValu>
+        <labl>
+          9. NA; RF; no Pre IW; short-form 'new' Cross Section
+        </labl>
+        <catStat type="freq">
+          522
+        </catStat>
+      </catgry>
+      <catgry missing="Y">
+        <catValu>
+          Sysmiss
+        </catValu>
+        <catStat type="freq">
+          662
+        </catStat>
+      </catgry>
+      <varFormat type="numeric" schema="other"/>
+    </var>
+    <var ID="V15" name="VCF0140A" files="F1" dcml="0" intrvl="discrete">
+      <location width="1"/>
+      <labl>
+        DEMOGRAPHICS: Respondent - Education 7-category
+      </labl>
+      <valrng>
+        <range min="1" max="7"/>
+      </valrng>
+      <invalrng>
+        <item VALUE="8"/>
+        <item VALUE="9"/>
+      </invalrng>
+      <sumStat type="vald">
+        54465
+      </sumStat>
+      <sumStat type="invd">
+        1209
+      </sumStat>
+      <catgry>
+        <catValu>
+          1
+        </catValu>
+        <labl>
+          1. 8 grades or less ('grade school')
+        </labl>
+        <catStat type="freq">
+          7766
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          2
+        </catValu>
+        <labl>
+          2. 9-12 grades ('high school'), no diploma/equivalency
+        </labl>
+        <catStat type="freq">
+          7396
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          3
+        </catValu>
+        <labl>
+          3. 12 grades, diploma or equivalency
+        </labl>
+        <catStat type="freq">
+          13617
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          4
+        </catValu>
+        <labl>
+          4. 12 grades, diploma or equivalency plus non-academic
+        </labl>
+        <catStat type="freq">
+          3894
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          5
+        </catValu>
+        <labl>
+          5. Some college, no degree; junior/community college
+        </labl>
+        <catStat type="freq">
+          11415
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          6
+        </catValu>
+        <labl>
+          6. BA level degrees
+        </labl>
+        <catStat type="freq">
+          7142
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          7
+        </catValu>
+        <labl>
+          7. Advanced degrees incl. LLB
+        </labl>
+        <catStat type="freq">
+          3235
+        </catStat>
+      </catgry>
+      <catgry missing="Y">
+        <catValu>
+          8
+        </catValu>
+        <labl>
+          8. DK
+        </labl>
+        <catStat type="freq">
+          26
+        </catStat>
+      </catgry>
+      <catgry missing="Y">
+        <catValu>
+          9
+        </catValu>
+        <labl>
+          9. NA; RF; no Pre IW; short-form 'new' Cross Section (1992)
+        </labl>
+        <catStat type="freq">
+          521
+        </catStat>
+      </catgry>
+      <catgry missing="Y">
+        <catValu>
+          Sysmiss
+        </catValu>
+        <catStat type="freq">
+          662
+        </catStat>
+      </catgry>
+      <varFormat type="numeric" schema="other"/>
+    </var>
+    <var ID="V16" name="VCF0147" files="F1" dcml="0" intrvl="discrete">
+      <location width="1"/>
+      <labl>
+        DEMOGRAPHICS: Respondent - Marital Status
+      </labl>
+      <valrng>
+        <range min="1" max="7"/>
+      </valrng>
+      <invalrng>
+        <item VALUE="8"/>
+        <item VALUE="9"/>
+      </invalrng>
+      <sumStat type="vald">
+        53212
+      </sumStat>
+      <sumStat type="invd">
+        2462
+      </sumStat>
+      <catgry>
+        <catValu>
+          1
+        </catValu>
+        <labl>
+          1. Married
+        </labl>
+        <catStat type="freq">
+          32672
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          2
+        </catValu>
+        <labl>
+          2. Never married
+        </labl>
+        <catStat type="freq">
+          7529
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          3
+        </catValu>
+        <labl>
+          3. Divorced
+        </labl>
+        <catStat type="freq">
+          4751
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          4
+        </catValu>
+        <labl>
+          4. Separated
+        </labl>
+        <catStat type="freq">
+          1586
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          5
+        </catValu>
+        <labl>
+          5. Widowed
+        </labl>
+        <catStat type="freq">
+          5575
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          7
+        </catValu>
+        <labl>
+          7. Partners; not married (VOLUNTEERED - exc.1986,2012)
+        </labl>
+        <catStat type="freq">
+          1099
+        </catStat>
+      </catgry>
+      <catgry missing="Y">
+        <catValu>
+          8
+        </catValu>
+        <labl>
+          8. R not married/partnered, refused to say whether never mar
+        </labl>
+        <catStat type="freq">
+          9
+        </catStat>
+      </catgry>
+      <catgry missing="Y">
+        <catValu>
+          9
+        </catValu>
+        <labl>
+          9. NA; no Pre IW; unmarried at time of IW (1952 only); short
+        </labl>
+        <catStat type="freq">
+          652
+        </catStat>
+      </catgry>
+      <catgry missing="Y">
+        <catValu>
+          Sysmiss
+        </catValu>
+        <catStat type="freq">
+          1801
+        </catStat>
+      </catgry>
+      <varFormat type="numeric" schema="other"/>
+    </var>
+    <var ID="V17" name="VCF0148" files="F1" dcml="0" intrvl="discrete">
+      <location width="1"/>
+      <labl>
+        DEMOGRAPHICS: Respondent - Social Class 8-category
+      </labl>
+      <valrng>
+        <range min="0" max="7"/>
+      </valrng>
+      <invalrng>
+        <item VALUE="9"/>
+      </invalrng>
+      <sumStat type="vald">
+        39585
+      </sumStat>
+      <sumStat type="invd">
+        16089
+      </sumStat>
+      <catgry>
+        <catValu>
+          0
+        </catValu>
+        <labl>
+          0. Lower class (VOLUNTEERED)
+        </labl>
+        <catStat type="freq">
+          145
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          1
+        </catValu>
+        <labl>
+          1. Average working
+        </labl>
+        <catStat type="freq">
+          15438
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          2
+        </catValu>
+        <labl>
+          2. Working--NA average or upper
+        </labl>
+        <catStat type="freq">
+          2068
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          3
+        </catValu>
+        <labl>
+          3. Upper working
+        </labl>
+        <catStat type="freq">
+          3228
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          4
+        </catValu>
+        <labl>
+          4. Average middle
+        </labl>
+        <catStat type="freq">
+          12424
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          5
+        </catValu>
+        <labl>
+          5. Middle class--NA average or upper
+        </labl>
+        <catStat type="freq">
+          2673
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          6
+        </catValu>
+        <labl>
+          6. Upper middle
+        </labl>
+        <catStat type="freq">
+          3574
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          7
+        </catValu>
+        <labl>
+          7. Upper class (VOLUNTEERED)
+        </labl>
+        <catStat type="freq">
+          35
+        </catStat>
+      </catgry>
+      <catgry missing="Y">
+        <catValu>
+          9
+        </catValu>
+        <labl>
+          9. DK; NA; other (incl. refused to accept idea of
+        </labl>
+        <catStat type="freq">
+          1658
+        </catStat>
+      </catgry>
+      <catgry missing="Y">
+        <catValu>
+          Sysmiss
+        </catValu>
+        <catStat type="freq">
+          14431
+        </catStat>
+      </catgry>
+      <varFormat type="numeric" schema="other"/>
+    </var>
+    <var ID="V18" name="VCF0148A" files="F1" dcml="0" intrvl="discrete">
+      <location width="1"/>
+      <labl>
+        DEMOGRAPHICS: Respondent - Average or Upper Middle/Working Class
+      </labl>
+      <valrng>
+        <range min="1" max="6"/>
+      </valrng>
+      <invalrng>
+        <item VALUE="9"/>
+      </invalrng>
+      <sumStat type="vald">
+        44111
+      </sumStat>
+      <sumStat type="invd">
+        11563
+      </sumStat>
+      <catgry>
+        <catValu>
+          1
+        </catValu>
+        <labl>
+          1. Average working
+        </labl>
+        <catStat type="freq">
+          15438
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          2
+        </catValu>
+        <labl>
+          2. Working--NA average or upper
+        </labl>
+        <catStat type="freq">
+          4746
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          3
+        </catValu>
+        <labl>
+          3. Upper working
+        </labl>
+        <catStat type="freq">
+          3228
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          4
+        </catValu>
+        <labl>
+          4. Average middle
+        </labl>
+        <catStat type="freq">
+          12424
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          5
+        </catValu>
+        <labl>
+          5. Middle class--NA average or upper
+        </labl>
+        <catStat type="freq">
+          4701
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          6
+        </catValu>
+        <labl>
+          6. Upper middle
+        </labl>
+        <catStat type="freq">
+          3574
+        </catStat>
+      </catgry>
+      <catgry missing="Y">
+        <catValu>
+          9
+        </catValu>
+        <labl>
+          9. DK; NA; other (incl. "refused to accept idea of class")
+        </labl>
+        <catStat type="freq">
+          2060
+        </catStat>
+      </catgry>
+      <catgry missing="Y">
+        <catValu>
+          Sysmiss
+        </catValu>
+        <catStat type="freq">
+          9503
+        </catStat>
+      </catgry>
+      <varFormat type="numeric" schema="other"/>
+    </var>
+    <var ID="V19" name="VCF0149" files="F1" dcml="0" intrvl="discrete">
+      <location width="1"/>
+      <labl>
+        DEMOGRAPHICS: Respondent - Think of Self as Member of Social Class
+      </labl>
+      <valrng>
+        <range min="1" max="6"/>
+      </valrng>
+      <invalrng>
+        <item VALUE="9"/>
+      </invalrng>
+      <sumStat type="vald">
+        44934
+      </sumStat>
+      <sumStat type="invd">
+        10740
+      </sumStat>
+      <catgry>
+        <catValu>
+          1
+        </catValu>
+        <labl>
+          1. Yes, think of self as member of class and that class is m
+        </labl>
+        <catStat type="freq">
+          15373
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          2
+        </catValu>
+        <labl>
+          2. No, don't think of self as member of class, but if had to
+        </labl>
+        <catStat type="freq">
+          5241
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          3
+        </catValu>
+        <labl>
+          3. Yes, think of self as member of class and that class is w
+        </labl>
+        <catStat type="freq">
+          15127
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          4
+        </catValu>
+        <labl>
+          4. No, don't think of self as member of class, but if had to
+        </labl>
+        <catStat type="freq">
+          8153
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          5
+        </catValu>
+        <labl>
+          5. Refuses to accept idea of class (except 1964, 1966, 1968)
+        </labl>
+        <catStat type="freq">
+          285
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          6
+        </catValu>
+        <labl>
+          6. Other (in 1964, 1966 and 1968, also includes "refuses to
+        </labl>
+        <catStat type="freq">
+          755
+        </catStat>
+      </catgry>
+      <catgry missing="Y">
+        <catValu>
+          9
+        </catValu>
+        <labl>
+          9. DK; NA; no Pre IW; short form (1992)
+        </labl>
+        <catStat type="freq">
+          1237
+        </catStat>
+      </catgry>
+      <catgry missing="Y">
+        <catValu>
+          Sysmiss
+        </catValu>
+        <catStat type="freq">
+          9503
+        </catStat>
+      </catgry>
+      <varFormat type="numeric" schema="other"/>
+    </var>
+    <var ID="V20" name="VCF0150" files="F1" dcml="0" intrvl="discrete">
+      <location width="2"/>
+      <labl>
+        DEMOGRAPHICS: Respondent - Work Status 16-category
+      </labl>
+      <valrng>
+        <range min="10" max="81"/>
+      </valrng>
+      <invalrng>
+        <item VALUE="99"/>
+      </invalrng>
+      <sumStat type="vald">
+        29960
+      </sumStat>
+      <sumStat type="invd">
+        25714
+      </sumStat>
+      <catgry>
+        <catValu>
+          10
+        </catValu>
+        <labl>
+          10. Working now
+        </labl>
+        <catStat type="freq">
+          16907
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          15
+        </catValu>
+        <labl>
+          15. Working now and retired--20 or more hrs/wk
+        </labl>
+        <catStat type="freq">
+          194
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          16
+        </catValu>
+        <labl>
+          16. Working now and permanently disabled--20 or more
+        </labl>
+        <catStat type="freq">
+          17
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          17
+        </catValu>
+        <labl>
+          17. Working now and homemaker--20 or more hrs/wk
+        </labl>
+        <catStat type="freq">
+          385
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          18
+        </catValu>
+        <labl>
+          18. Working now and student--20 or more hrs/wk
+        </labl>
+        <catStat type="freq">
+          481
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          20
+        </catValu>
+        <labl>
+          20. Temporarily laid off
+        </labl>
+        <catStat type="freq">
+          389
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          40
+        </catValu>
+        <labl>
+          40. Unemployed
+        </labl>
+        <catStat type="freq">
+          1383
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          50
+        </catValu>
+        <labl>
+          50. Retired, no current occupation
+        </labl>
+        <catStat type="freq">
+          4933
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          51
+        </catValu>
+        <labl>
+          51. Retired and working now--less than 20 hrs/wk
+        </labl>
+        <catStat type="freq">
+          164
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          60
+        </catValu>
+        <labl>
+          60. Permanently disabled, no current occupation
+        </labl>
+        <catStat type="freq">
+          1272
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          61
+        </catValu>
+        <labl>
+          61. Permanently disabled and working--less than 20 hrs/wk
+        </labl>
+        <catStat type="freq">
+          15
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          70
+        </catValu>
+        <labl>
+          70. Homemaker, no other occupation
+        </labl>
+        <catStat type="freq">
+          2599
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          71
+        </catValu>
+        <labl>
+          71. Homemaker and working now--less than 20 hrs/wk
+        </labl>
+        <catStat type="freq">
+          257
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          75
+        </catValu>
+        <labl>
+          75. Homemaker and student, no other occupation
+        </labl>
+        <catStat type="freq">
+          62
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          80
+        </catValu>
+        <labl>
+          80. Student, no current occupation
+        </labl>
+        <catStat type="freq">
+          640
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          81
+        </catValu>
+        <labl>
+          81. Student and working now--less than 20 hrs/wk
+        </labl>
+        <catStat type="freq">
+          262
+        </catStat>
+      </catgry>
+      <catgry missing="Y">
+        <catValu>
+          99
+        </catValu>
+        <labl>
+          99. NA
+        </labl>
+        <catStat type="freq">
+          55
+        </catStat>
+      </catgry>
+      <catgry missing="Y">
+        <catValu>
+          Sysmiss
+        </catValu>
+        <catStat type="freq">
+          25659
+        </catStat>
+      </catgry>
+      <varFormat type="numeric" schema="other"/>
+    </var>
+    <var ID="V21" name="VCF0808" files="F1" dcml="0" intrvl="discrete">
+      <location width="1"/>
+      <labl>
+        ISSUES: Guaranteed Jobs and Income
+      </labl>
+      <valrng>
+        <range min="1" max="9"/>
+      </valrng>
+      <invalrng>
+        <item VALUE="0"/>
+      </invalrng>
+      <sumStat type="vald">
+        8820
+      </sumStat>
+      <sumStat type="invd">
+        46854
+      </sumStat>
+      <catgry>
+        <catValu>
+          1
+        </catValu>
+        <labl>
+          1. Yes, government should see to it that every person
+        </labl>
+        <catStat type="freq">
+          3751
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          2
+        </catValu>
+        <labl>
+          2. Yes, should let each person get ahead on his own
+        </labl>
+        <catStat type="freq">
+          3166
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          9
+        </catValu>
+        <labl>
+          9. Depends; other; both; no opinion; DK; no interest;
+        </labl>
+        <catStat type="freq">
+          1903
+        </catStat>
+      </catgry>
+      <catgry missing="Y">
+        <catValu>
+          0
+        </catValu>
+        <labl>
+          0. NA; no Pre IW; no Post IW
+        </labl>
+        <catStat type="freq">
+          212
+        </catStat>
+      </catgry>
+      <catgry missing="Y">
+        <catValu>
+          Sysmiss
+        </catValu>
+        <catStat type="freq">
+          46642
+        </catStat>
+      </catgry>
+      <varFormat type="numeric" schema="other"/>
+    </var>
+    <var ID="V22" name="VCF0837" files="F1" dcml="0" intrvl="discrete">
+      <location width="1"/>
+      <labl>
+        ISSUES: When Should Abortion Be Allowed
+      </labl>
+      <valrng>
+        <range min="1" max="9"/>
+      </valrng>
+      <invalrng>
+        <item VALUE="0"/>
+      </invalrng>
+      <sumStat type="vald">
+        8262
+      </sumStat>
+      <sumStat type="invd">
+        47412
+      </sumStat>
+      <catgry>
+        <catValu>
+          1
+        </catValu>
+        <labl>
+          1. Abortion should never be permitted
+        </labl>
+        <catStat type="freq">
+          871
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          2
+        </catValu>
+        <labl>
+          2. Abortion should be permitted only if the life and
+        </labl>
+        <catStat type="freq">
+          3646
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          3
+        </catValu>
+        <labl>
+          3. Abortion should be permitted if, due to personal
+        </labl>
+        <catStat type="freq">
+          1364
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          4
+        </catValu>
+        <labl>
+          4. Abortion should never be forbidden, since one should
+        </labl>
+        <catStat type="freq">
+          2109
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          9
+        </catValu>
+        <labl>
+          9. DK; other
+        </labl>
+        <catStat type="freq">
+          272
+        </catStat>
+      </catgry>
+      <catgry missing="Y">
+        <catValu>
+          0
+        </catValu>
+        <labl>
+          0. NA; no Post IW
+        </labl>
+        <catStat type="freq">
+          609
+        </catStat>
+      </catgry>
+      <catgry missing="Y">
+        <catValu>
+          Sysmiss
+        </catValu>
+        <catStat type="freq">
+          46803
+        </catStat>
+      </catgry>
+      <varFormat type="numeric" schema="other"/>
+    </var>
+    <var ID="V23" name="VCF0838" files="F1" dcml="0" intrvl="discrete">
+      <location width="1"/>
+      <labl>
+        ISSUES: By Law, When Should Abortion Be Allowed
+      </labl>
+      <valrng>
+        <range min="1" max="9"/>
+      </valrng>
+      <invalrng>
+        <item VALUE="0"/>
+      </invalrng>
+      <sumStat type="vald">
+        28388
+      </sumStat>
+      <sumStat type="invd">
+        27286
+      </sumStat>
+      <catgry>
+        <catValu>
+          1
+        </catValu>
+        <labl>
+          1. By law, abortion should never be permitted
+        </labl>
+        <catStat type="freq">
+          3429
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          2
+        </catValu>
+        <labl>
+          2. The law should permit abortion only in case of rape,
+        </labl>
+        <catStat type="freq">
+          8333
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          3
+        </catValu>
+        <labl>
+          3. The law should permit abortion for reasons other than
+        </labl>
+        <catStat type="freq">
+          4608
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          4
+        </catValu>
+        <labl>
+          4. By law, a woman should always be able to obtain an
+        </labl>
+        <catStat type="freq">
+          11519
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          9
+        </catValu>
+        <labl>
+          9. DK; other
+        </labl>
+        <catStat type="freq">
+          499
+        </catStat>
+      </catgry>
+      <catgry missing="Y">
+        <catValu>
+          0
+        </catValu>
+        <labl>
+          0. NA; no Post IW; version NEW (2008)
+        </labl>
+        <catStat type="freq">
+          1627
+        </catStat>
+      </catgry>
+      <catgry missing="Y">
+        <catValu>
+          Sysmiss
+        </catValu>
+        <catStat type="freq">
+          25659
+        </catStat>
+      </catgry>
+      <varFormat type="numeric" schema="other"/>
+    </var>
+    <var ID="V24" name="VCF0876A" files="F1" dcml="0" intrvl="discrete">
+      <location width="1"/>
+      <labl>
+        ISSUES: Strength of Position on Law to Protect Homosexuals Against Discrimination
+      </labl>
+      <valrng>
+        <range min="1" max="7"/>
+      </valrng>
+      <invalrng>
+        <item VALUE="9"/>
+      </invalrng>
+      <sumStat type="vald">
+        13269
+      </sumStat>
+      <sumStat type="invd">
+        42405
+      </sumStat>
+      <catgry>
+        <catValu>
+          1
+        </catValu>
+        <labl>
+          1. Favor strongly
+        </labl>
+        <catStat type="freq">
+          5506
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          2
+        </catValu>
+        <labl>
+          2. Favor not strongly
+        </labl>
+        <catStat type="freq">
+          3110
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          4
+        </catValu>
+        <labl>
+          4. Oppose not strongly
+        </labl>
+        <catStat type="freq">
+          1610
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          5
+        </catValu>
+        <labl>
+          5. Oppose strongly
+        </labl>
+        <catStat type="freq">
+          2499
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          7
+        </catValu>
+        <labl>
+          7. DK if favor or oppose; depends (1988); DK if
+        </labl>
+        <catStat type="freq">
+          544
+        </catStat>
+      </catgry>
+      <catgry missing="Y">
+        <catValu>
+          9
+        </catValu>
+        <labl>
+          9. NA if favor or oppose; NA if favor/oppose
+        </labl>
+        <catStat type="freq">
+          1334
+        </catStat>
+      </catgry>
+      <catgry missing="Y">
+        <catValu>
+          Sysmiss
+        </catValu>
+        <catStat type="freq">
+          41071
+        </catStat>
+      </catgry>
+      <varFormat type="numeric" schema="other"/>
+    </var>
+    <var ID="V25" name="VCF0877" files="F1" dcml="0" intrvl="discrete">
+      <location width="1"/>
+      <labl>
+        ISSUES: Favor or Oppose Gays in the Military
+      </labl>
+      <valrng>
+        <range min="1" max="8"/>
+      </valrng>
+      <invalrng>
+        <item VALUE="9"/>
+      </invalrng>
+      <sumStat type="vald">
+        11862
+      </sumStat>
+      <sumStat type="invd">
+        43812
+      </sumStat>
+      <catgry>
+        <catValu>
+          1
+        </catValu>
+        <labl>
+          1. Yes, think so
+        </labl>
+        <catStat type="freq">
+          8692
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          5
+        </catValu>
+        <labl>
+          5. Don't think so
+        </labl>
+        <catStat type="freq">
+          2831
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          8
+        </catValu>
+        <labl>
+          8. DK
+        </labl>
+        <catStat type="freq">
+          339
+        </catStat>
+      </catgry>
+      <catgry missing="Y">
+        <catValu>
+          9
+        </catValu>
+        <labl>
+          9. NA; no Post IW
+        </labl>
+        <catStat type="freq">
+          701
+        </catStat>
+      </catgry>
+      <catgry missing="Y">
+        <catValu>
+          Sysmiss
+        </catValu>
+        <catStat type="freq">
+          43111
+        </catStat>
+      </catgry>
+      <varFormat type="numeric" schema="other"/>
+    </var>
+    <var ID="V26" name="VCF0877A" files="F1" dcml="0" intrvl="discrete">
+      <location width="1"/>
+      <labl>
+        ISSUES: Strength of Position on Gays in the Military
+      </labl>
+      <valrng>
+        <range min="1" max="7"/>
+      </valrng>
+      <invalrng>
+        <item VALUE="9"/>
+      </invalrng>
+      <sumStat type="vald">
+        11855
+      </sumStat>
+      <sumStat type="invd">
+        43819
+      </sumStat>
+      <catgry>
+        <catValu>
+          1
+        </catValu>
+        <labl>
+          1. Feel strongly should be allowed
+        </labl>
+        <catStat type="freq">
+          5865
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          2
+        </catValu>
+        <labl>
+          2. Feel not strongly should be allowed
+        </labl>
+        <catStat type="freq">
+          2806
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          4
+        </catValu>
+        <labl>
+          4. Feel not strongly should not be allowed
+        </labl>
+        <catStat type="freq">
+          717
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          5
+        </catValu>
+        <labl>
+          5. Feel strongly should not be allowed
+        </labl>
+        <catStat type="freq">
+          2104
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          7
+        </catValu>
+        <labl>
+          7. DK if favor or oppose; depends (1988); DK if
+        </labl>
+        <catStat type="freq">
+          363
+        </catStat>
+      </catgry>
+      <catgry missing="Y">
+        <catValu>
+          9
+        </catValu>
+        <labl>
+          9. NA if favor or oppose; NA if favor/oppose
+        </labl>
+        <catStat type="freq">
+          708
+        </catStat>
+      </catgry>
+      <catgry missing="Y">
+        <catValu>
+          Sysmiss
+        </catValu>
+        <catStat type="freq">
+          43111
+        </catStat>
+      </catgry>
+      <varFormat type="numeric" schema="other"/>
+    </var>
+    <var ID="V27" name="VCF0878" files="F1" dcml="0" intrvl="discrete">
+      <location width="1"/>
+      <labl>
+        ISSUES: Should Gays/Lesbians Be Able to Adopt Children
+      </labl>
+      <valrng>
+        <range min="1" max="8"/>
+      </valrng>
+      <invalrng>
+        <item VALUE="9"/>
+      </invalrng>
+      <sumStat type="vald">
+        13209
+      </sumStat>
+      <sumStat type="invd">
+        42465
+      </sumStat>
+      <catgry>
+        <catValu>
+          1
+        </catValu>
+        <labl>
+          1. Yes
+        </labl>
+        <catStat type="freq">
+          6495
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          5
+        </catValu>
+        <labl>
+          5. No
+        </labl>
+        <catStat type="freq">
+          6283
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          8
+        </catValu>
+        <labl>
+          8. DK
+        </labl>
+        <catStat type="freq">
+          431
+        </catStat>
+      </catgry>
+      <catgry missing="Y">
+        <catValu>
+          9
+        </catValu>
+        <labl>
+          9. NA; no Post IW
+        </labl>
+        <catStat type="freq">
+          531
+        </catStat>
+      </catgry>
+      <catgry missing="Y">
+        <catValu>
+          Sysmiss
+        </catValu>
+        <catStat type="freq">
+          41934
+        </catStat>
+      </catgry>
+      <varFormat type="numeric" schema="other"/>
+    </var>
+    <var ID="V28" name="VCF0879" files="F1" dcml="0" intrvl="discrete">
+      <location width="1"/>
+      <labl>
+        ISSUES: Increase or Decrease Number of Immigrants to U.S. 6-Category
+      </labl>
+      <valrng>
+        <range min="1" max="8"/>
+      </valrng>
+      <invalrng>
+        <item VALUE="9"/>
+      </invalrng>
+      <sumStat type="vald">
+        15438
+      </sumStat>
+      <sumStat type="invd">
+        40236
+      </sumStat>
+      <catgry>
+        <catValu>
+          1
+        </catValu>
+        <labl>
+          1. Increased a lot
+        </labl>
+        <catStat type="freq">
+          525
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          2
+        </catValu>
+        <labl>
+          2. Increased a little
+        </labl>
+        <catStat type="freq">
+          1137
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          3
+        </catValu>
+        <labl>
+          3. Same as now
+        </labl>
+        <catStat type="freq">
+          6133
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          4
+        </catValu>
+        <labl>
+          4. Decreased a little
+        </labl>
+        <catStat type="freq">
+          3617
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          5
+        </catValu>
+        <labl>
+          5. Decreased a lot
+        </labl>
+        <catStat type="freq">
+          3728
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          8
+        </catValu>
+        <labl>
+          8. DK
+        </labl>
+        <catStat type="freq">
+          298
+        </catStat>
+      </catgry>
+      <catgry missing="Y">
+        <catValu>
+          9
+        </catValu>
+        <labl>
+          9. NA; no Post IW
+        </labl>
+        <catStat type="freq">
+          1285
+        </catStat>
+      </catgry>
+      <catgry missing="Y">
+        <catValu>
+          Sysmiss
+        </catValu>
+        <catStat type="freq">
+          38951
+        </catStat>
+      </catgry>
+      <varFormat type="numeric" schema="other"/>
+    </var>
+    <var ID="V29" name="VCF0879A" files="F1" dcml="0" intrvl="discrete">
+      <location width="1"/>
+      <labl>
+        ISSUES: Increase or Decrease Number of Immigrants to U.S. 4-Category
+      </labl>
+      <valrng>
+        <range min="1" max="8"/>
+      </valrng>
+      <invalrng>
+        <item VALUE="9"/>
+      </invalrng>
+      <sumStat type="vald">
+        17240
+      </sumStat>
+      <sumStat type="invd">
+        38434
+      </sumStat>
+      <catgry>
+        <catValu>
+          1
+        </catValu>
+        <labl>
+          1. Increased
+        </labl>
+        <catStat type="freq">
+          1834
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          3
+        </catValu>
+        <labl>
+          3. Same as now
+        </labl>
+        <catStat type="freq">
+          6918
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          5
+        </catValu>
+        <labl>
+          5. Decreased
+        </labl>
+        <catStat type="freq">
+          8130
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          8
+        </catValu>
+        <labl>
+          8. DK
+        </labl>
+        <catStat type="freq">
+          358
+        </catStat>
+      </catgry>
+      <catgry missing="Y">
+        <catValu>
+          9
+        </catValu>
+        <labl>
+          9. NA; no Post IW
+        </labl>
+        <catStat type="freq">
+          1290
+        </catStat>
+      </catgry>
+      <catgry missing="Y">
+        <catValu>
+          Sysmiss
+        </catValu>
+        <catStat type="freq">
+          37144
+        </catStat>
+      </catgry>
+      <varFormat type="numeric" schema="other"/>
+    </var>
+    <var ID="V30" name="VCF0881" files="F1" dcml="0" intrvl="discrete">
+      <location width="1"/>
+      <labl>
+        ECONOMIC WELL-BEING: Better or Worse Off in Next Year
+      </labl>
+      <valrng>
+        <range min="1" max="3"/>
+      </valrng>
+      <invalrng>
+        <item VALUE="9"/>
+        <item VALUE="0"/>
+      </invalrng>
+      <sumStat type="vald">
+        43782
+      </sumStat>
+      <sumStat type="invd">
+        11892
+      </sumStat>
+      <catgry>
+        <catValu>
+          1
+        </catValu>
+        <labl>
+          1. Better off (1956-1960,1964: get better)
+        </labl>
+        <catStat type="freq">
+          15654
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          2
+        </catValu>
+        <labl>
+          2. Same (1956-1960,1964: stay the way it is)
+        </labl>
+        <catStat type="freq">
+          22607
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          3
+        </catValu>
+        <labl>
+          3. Worse off (1956-1960,1964: get worse)
+        </labl>
+        <catStat type="freq">
+          5521
+        </catStat>
+      </catgry>
+      <catgry missing="Y">
+        <catValu>
+          0
+        </catValu>
+        <labl>
+          0. NA; Form B (1986); no Pre IW; no Post IW; form
+        </labl>
+        <catStat type="freq">
+          6346
+        </catStat>
+      </catgry>
+      <catgry missing="Y">
+        <catValu>
+          9
+        </catValu>
+        <labl>
+          9. DK; both; uncertain
+        </labl>
+        <catStat type="freq">
+          335
+        </catStat>
+      </catgry>
+      <catgry missing="Y">
+        <catValu>
+          Sysmiss
+        </catValu>
+        <catStat type="freq">
+          5211
+        </catStat>
+      </catgry>
+      <varFormat type="numeric" schema="other"/>
+    </var>
+    <var ID="V31" name="VCF0886" files="F1" dcml="0" intrvl="discrete">
+      <location width="1"/>
+      <labl>
+        ISSUES: Federal Spending- Poor/Poor People
+      </labl>
+      <valrng>
+        <range min="1" max="8"/>
+      </valrng>
+      <invalrng>
+        <item VALUE="9"/>
+      </invalrng>
+      <sumStat type="vald">
+        16056
+      </sumStat>
+      <sumStat type="invd">
+        39618
+      </sumStat>
+      <catgry>
+        <catValu>
+          1
+        </catValu>
+        <labl>
+          1. Increased
+        </labl>
+        <catStat type="freq">
+          7900
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          2
+        </catValu>
+        <labl>
+          2. Same
+        </labl>
+        <catStat type="freq">
+          6112
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          3
+        </catValu>
+        <labl>
+          3. Decreased (before 2012: or cut out entirely)
+        </labl>
+        <catStat type="freq">
+          1856
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          8
+        </catValu>
+        <labl>
+          8. DK
+        </labl>
+        <catStat type="freq">
+          188
+        </catStat>
+      </catgry>
+      <catgry missing="Y">
+        <catValu>
+          9
+        </catValu>
+        <labl>
+          9. NA; no Post IW; abbrev. telephone IW (1984)
+        </labl>
+        <catStat type="freq">
+          909
+        </catStat>
+      </catgry>
+      <catgry missing="Y">
+        <catValu>
+          Sysmiss
+        </catValu>
+        <catStat type="freq">
+          38709
+        </catStat>
+      </catgry>
+      <varFormat type="numeric" schema="other"/>
+    </var>
+    <var ID="V32" name="VCF0887" files="F1" dcml="0" intrvl="discrete">
+      <location width="1"/>
+      <labl>
+        ISSUES: Federal Spending- Child Care
+      </labl>
+      <valrng>
+        <range min="1" max="8"/>
+      </valrng>
+      <invalrng>
+        <item VALUE="9"/>
+      </invalrng>
+      <sumStat type="vald">
+        22516
+      </sumStat>
+      <sumStat type="invd">
+        33158
+      </sumStat>
+      <catgry>
+        <catValu>
+          1
+        </catValu>
+        <labl>
+          1. Increased
+        </labl>
+        <catStat type="freq">
+          11408
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          2
+        </catValu>
+        <labl>
+          2. Same
+        </labl>
+        <catStat type="freq">
+          8134
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          3
+        </catValu>
+        <labl>
+          3. Decreased (before 2012: or cut out entirely)
+        </labl>
+        <catStat type="freq">
+          2559
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          8
+        </catValu>
+        <labl>
+          8. DK
+        </labl>
+        <catStat type="freq">
+          415
+        </catStat>
+      </catgry>
+      <catgry missing="Y">
+        <catValu>
+          9
+        </catValu>
+        <labl>
+          9. NA; no Post IW; abbrev. telephone IW (1984)
+        </labl>
+        <catStat type="freq">
+          264
+        </catStat>
+      </catgry>
+      <catgry missing="Y">
+        <catValu>
+          Sysmiss
+        </catValu>
+        <catStat type="freq">
+          32894
+        </catStat>
+      </catgry>
+      <varFormat type="numeric" schema="other"/>
+    </var>
+    <var ID="V33" name="VCF0888" files="F1" dcml="0" intrvl="discrete">
+      <location width="1"/>
+      <labl>
+        ISSUES: Federal Spending- Dealing with Crime
+      </labl>
+      <valrng>
+        <range min="1" max="8"/>
+      </valrng>
+      <invalrng>
+        <item VALUE="9"/>
+      </invalrng>
+      <sumStat type="vald">
+        20454
+      </sumStat>
+      <sumStat type="invd">
+        35220
+      </sumStat>
+      <catgry>
+        <catValu>
+          1
+        </catValu>
+        <labl>
+          1. Increased
+        </labl>
+        <catStat type="freq">
+          12751
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          2
+        </catValu>
+        <labl>
+          2. Same
+        </labl>
+        <catStat type="freq">
+          6354
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          3
+        </catValu>
+        <labl>
+          3. Decreased (before 2012: or cut out entirely)
+        </labl>
+        <catStat type="freq">
+          1127
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          8
+        </catValu>
+        <labl>
+          8. DK
+        </labl>
+        <catStat type="freq">
+          222
+        </catStat>
+      </catgry>
+      <catgry missing="Y">
+        <catValu>
+          9
+        </catValu>
+        <labl>
+          9. NA; no Post IW; abbrev. telephone IW (1984)
+        </labl>
+        <catStat type="freq">
+          563
+        </catStat>
+      </catgry>
+      <catgry missing="Y">
+        <catValu>
+          Sysmiss
+        </catValu>
+        <catStat type="freq">
+          34657
+        </catStat>
+      </catgry>
+      <varFormat type="numeric" schema="other"/>
+    </var>
+    <var ID="V34" name="VCF0889" files="F1" dcml="0" intrvl="discrete">
+      <location width="1"/>
+      <labl>
+        ISSUES: Federal Spending- Aids Research/Fight Aids
+      </labl>
+      <valrng>
+        <range min="1" max="8"/>
+      </valrng>
+      <invalrng>
+        <item VALUE="9"/>
+      </invalrng>
+      <sumStat type="vald">
+        13119
+      </sumStat>
+      <sumStat type="invd">
+        42555
+      </sumStat>
+      <catgry>
+        <catValu>
+          1
+        </catValu>
+        <labl>
+          1. Increased
+        </labl>
+        <catStat type="freq">
+          7424
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          2
+        </catValu>
+        <labl>
+          2. Same
+        </labl>
+        <catStat type="freq">
+          4219
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          3
+        </catValu>
+        <labl>
+          3. Decreased or cut out entirely
+        </labl>
+        <catStat type="freq">
+          1179
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          8
+        </catValu>
+        <labl>
+          8. DK
+        </labl>
+        <catStat type="freq">
+          297
+        </catStat>
+      </catgry>
+      <catgry missing="Y">
+        <catValu>
+          9
+        </catValu>
+        <labl>
+          9. NA; no Post IW; abbrev. telephone IW (1984)
+        </labl>
+        <catStat type="freq">
+          213
+        </catStat>
+      </catgry>
+      <catgry missing="Y">
+        <catValu>
+          Sysmiss
+        </catValu>
+        <catStat type="freq">
+          42342
+        </catStat>
+      </catgry>
+      <varFormat type="numeric" schema="other"/>
+    </var>
+    <var ID="V35" name="VCF0890" files="F1" dcml="0" intrvl="discrete">
+      <location width="1"/>
+      <labl>
+        ISSUES: Federal Spending- Public Schools
+      </labl>
+      <valrng>
+        <range min="1" max="8"/>
+      </valrng>
+      <invalrng>
+        <item VALUE="9"/>
+      </invalrng>
+      <sumStat type="vald">
+        23800
+      </sumStat>
+      <sumStat type="invd">
+        31874
+      </sumStat>
+      <catgry>
+        <catValu>
+          1
+        </catValu>
+        <labl>
+          1. Increased
+        </labl>
+        <catStat type="freq">
+          15890
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          2
+        </catValu>
+        <labl>
+          2. Same
+        </labl>
+        <catStat type="freq">
+          6223
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          3
+        </catValu>
+        <labl>
+          3. Decreased (before 2012: or cut out entirely)
+        </labl>
+        <catStat type="freq">
+          1449
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          8
+        </catValu>
+        <labl>
+          8. DK
+        </labl>
+        <catStat type="freq">
+          238
+        </catStat>
+      </catgry>
+      <catgry missing="Y">
+        <catValu>
+          9
+        </catValu>
+        <labl>
+          9. NA; no Post IW; abbrev. telephone IW (1984)
+        </labl>
+        <catStat type="freq">
+          1237
+        </catStat>
+      </catgry>
+      <catgry missing="Y">
+        <catValu>
+          Sysmiss
+        </catValu>
+        <catStat type="freq">
+          30637
+        </catStat>
+      </catgry>
+      <varFormat type="numeric" schema="other"/>
+    </var>
+    <var ID="V36" name="VCF0891" files="F1" dcml="0" intrvl="discrete">
+      <location width="1"/>
+      <labl>
+        ISSUES: Federal Spending- Fin Aid for College Students
+      </labl>
+      <valrng>
+        <range min="1" max="8"/>
+      </valrng>
+      <invalrng>
+        <item VALUE="9"/>
+      </invalrng>
+      <sumStat type="vald">
+        8388
+      </sumStat>
+      <sumStat type="invd">
+        47286
+      </sumStat>
+      <catgry>
+        <catValu>
+          1
+        </catValu>
+        <labl>
+          1. Increased
+        </labl>
+        <catStat type="freq">
+          4108
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          2
+        </catValu>
+        <labl>
+          2. Same
+        </labl>
+        <catStat type="freq">
+          3259
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          3
+        </catValu>
+        <labl>
+          3. Decreased or cut out entirely
+        </labl>
+        <catStat type="freq">
+          818
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          8
+        </catValu>
+        <labl>
+          8. DK
+        </labl>
+        <catStat type="freq">
+          203
+        </catStat>
+      </catgry>
+      <catgry missing="Y">
+        <catValu>
+          9
+        </catValu>
+        <labl>
+          9. NA; no Post IW; abbrev. telephone IW (1984)
+        </labl>
+        <catStat type="freq">
+          27
+        </catStat>
+      </catgry>
+      <catgry missing="Y">
+        <catValu>
+          Sysmiss
+        </catValu>
+        <catStat type="freq">
+          47259
+        </catStat>
+      </catgry>
+      <varFormat type="numeric" schema="other"/>
+    </var>
+    <var ID="V37" name="VCF0892" files="F1" dcml="0" intrvl="discrete">
+      <location width="1"/>
+      <labl>
+        ISSUES: Federal Spending- Foreign Aid
+      </labl>
+      <valrng>
+        <range min="1" max="8"/>
+      </valrng>
+      <invalrng>
+        <item VALUE="9"/>
+      </invalrng>
+      <sumStat type="vald">
+        10337
+      </sumStat>
+      <sumStat type="invd">
+        45337
+      </sumStat>
+      <catgry>
+        <catValu>
+          1
+        </catValu>
+        <labl>
+          1. Increased
+        </labl>
+        <catStat type="freq">
+          876
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          2
+        </catValu>
+        <labl>
+          2. Same
+        </labl>
+        <catStat type="freq">
+          4070
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          3
+        </catValu>
+        <labl>
+          3. Decreased or cut out entirely
+        </labl>
+        <catStat type="freq">
+          5192
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          8
+        </catValu>
+        <labl>
+          8. DK
+        </labl>
+        <catStat type="freq">
+          199
+        </catStat>
+      </catgry>
+      <catgry missing="Y">
+        <catValu>
+          9
+        </catValu>
+        <labl>
+          9. NA; no Post IW; abbrev. telephone IW (1984)
+        </labl>
+        <catStat type="freq">
+          209
+        </catStat>
+      </catgry>
+      <catgry missing="Y">
+        <catValu>
+          Sysmiss
+        </catValu>
+        <catStat type="freq">
+          45128
+        </catStat>
+      </catgry>
+      <varFormat type="numeric" schema="other"/>
+    </var>
+    <var ID="V38" name="VCF0893" files="F1" dcml="0" intrvl="discrete">
+      <location width="1"/>
+      <labl>
+        ISSUES: Federal Spending- The Homeless
+      </labl>
+      <valrng>
+        <range min="1" max="8"/>
+      </valrng>
+      <invalrng>
+        <item VALUE="9"/>
+      </invalrng>
+      <sumStat type="vald">
+        8188
+      </sumStat>
+      <sumStat type="invd">
+        47486
+      </sumStat>
+      <catgry>
+        <catValu>
+          1
+        </catValu>
+        <labl>
+          1. Increased
+        </labl>
+        <catStat type="freq">
+          5312
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          2
+        </catValu>
+        <labl>
+          2. Same
+        </labl>
+        <catStat type="freq">
+          2121
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          3
+        </catValu>
+        <labl>
+          3. Decreased or cut out entirely
+        </labl>
+        <catStat type="freq">
+          551
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          8
+        </catValu>
+        <labl>
+          8. DK
+        </labl>
+        <catStat type="freq">
+          204
+        </catStat>
+      </catgry>
+      <catgry missing="Y">
+        <catValu>
+          9
+        </catValu>
+        <labl>
+          9. NA; no Post IW; abbrev. telephone IW (1984)
+        </labl>
+        <catStat type="freq">
+          31
+        </catStat>
+      </catgry>
+      <catgry missing="Y">
+        <catValu>
+          Sysmiss
+        </catValu>
+        <catStat type="freq">
+          47455
+        </catStat>
+      </catgry>
+      <varFormat type="numeric" schema="other"/>
+    </var>
+    <var ID="V39" name="VCF0894" files="F1" dcml="0" intrvl="discrete">
+      <location width="1"/>
+      <labl>
+        ISSUES: Federal Spending- Welfare Programs
+      </labl>
+      <valrng>
+        <range min="1" max="8"/>
+      </valrng>
+      <invalrng>
+        <item VALUE="9"/>
+      </invalrng>
+      <sumStat type="vald">
+        18521
+      </sumStat>
+      <sumStat type="invd">
+        37153
+      </sumStat>
+      <catgry>
+        <catValu>
+          1
+        </catValu>
+        <labl>
+          1. Increased
+        </labl>
+        <catStat type="freq">
+          3297
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          2
+        </catValu>
+        <labl>
+          2. Same
+        </labl>
+        <catStat type="freq">
+          7471
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          3
+        </catValu>
+        <labl>
+          3. Decreased (before 2012: or cut out entirely)
+        </labl>
+        <catStat type="freq">
+          7473
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          8
+        </catValu>
+        <labl>
+          8. DK
+        </labl>
+        <catStat type="freq">
+          280
+        </catStat>
+      </catgry>
+      <catgry missing="Y">
+        <catValu>
+          9
+        </catValu>
+        <labl>
+          9. NA; no Post IW; abbrev. telephone IW (1984)
+        </labl>
+        <catStat type="freq">
+          239
+        </catStat>
+      </catgry>
+      <catgry missing="Y">
+        <catValu>
+          Sysmiss
+        </catValu>
+        <catStat type="freq">
+          36914
+        </catStat>
+      </catgry>
+      <varFormat type="numeric" schema="other"/>
+    </var>
+    <var ID="V40" name="VCF9046" files="F1" dcml="0" intrvl="discrete">
+      <location width="1"/>
+      <labl>
+        ISSUES: Federal Spending- Food Stamps
+      </labl>
+      <valrng>
+        <range min="1" max="8"/>
+      </valrng>
+      <invalrng>
+        <item VALUE="9"/>
+      </invalrng>
+      <sumStat type="vald">
+        15846
+      </sumStat>
+      <sumStat type="invd">
+        39828
+      </sumStat>
+      <catgry>
+        <catValu>
+          1
+        </catValu>
+        <labl>
+          1. Increased
+        </labl>
+        <catStat type="freq">
+          2685
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          2
+        </catValu>
+        <labl>
+          2. Same
+        </labl>
+        <catStat type="freq">
+          7387
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          3
+        </catValu>
+        <labl>
+          3. Decreased
+        </labl>
+        <catStat type="freq">
+          5103
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          7
+        </catValu>
+        <labl>
+          7. Cut out entirely (volunteered)
+        </labl>
+        <catStat type="freq">
+          32
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          8
+        </catValu>
+        <labl>
+          8. DK
+        </labl>
+        <catStat type="freq">
+          639
+        </catStat>
+      </catgry>
+      <catgry missing="Y">
+        <catValu>
+          9
+        </catValu>
+        <labl>
+          9. NA; no Post IW; abbrev. telephone IW (1984)
+        </labl>
+        <catStat type="freq">
+          408
+        </catStat>
+      </catgry>
+      <catgry missing="Y">
+        <catValu>
+          Sysmiss
+        </catValu>
+        <catStat type="freq">
+          39420
+        </catStat>
+      </catgry>
+      <varFormat type="numeric" schema="other"/>
+    </var>
+    <var ID="V41" name="VCF9047" files="F1" dcml="0" intrvl="discrete">
+      <location width="1"/>
+      <labl>
+        ISSUES: Federal Spending- Improve and Protect the Environment
+      </labl>
+      <valrng>
+        <range min="1" max="8"/>
+      </valrng>
+      <invalrng>
+        <item VALUE="9"/>
+      </invalrng>
+      <sumStat type="vald">
+        25440
+      </sumStat>
+      <sumStat type="invd">
+        30234
+      </sumStat>
+      <catgry>
+        <catValu>
+          1
+        </catValu>
+        <labl>
+          1. Increased
+        </labl>
+        <catStat type="freq">
+          12467
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          2
+        </catValu>
+        <labl>
+          2. Same
+        </labl>
+        <catStat type="freq">
+          10314
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          3
+        </catValu>
+        <labl>
+          3. Decreased
+        </labl>
+        <catStat type="freq">
+          2193
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          7
+        </catValu>
+        <labl>
+          7. Cut out entirely (volunteered)
+        </labl>
+        <catStat type="freq">
+          5
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          8
+        </catValu>
+        <labl>
+          8. DK
+        </labl>
+        <catStat type="freq">
+          461
+        </catStat>
+      </catgry>
+      <catgry missing="Y">
+        <catValu>
+          9
+        </catValu>
+        <labl>
+          9. NA; no Post IW; abbrev. telephone IW (1984)
+        </labl>
+        <catStat type="freq">
+          561
+        </catStat>
+      </catgry>
+      <catgry missing="Y">
+        <catValu>
+          Sysmiss
+        </catValu>
+        <catStat type="freq">
+          29673
+        </catStat>
+      </catgry>
+      <varFormat type="numeric" schema="other"/>
+    </var>
+    <var ID="V42" name="VCF9048" files="F1" dcml="0" intrvl="discrete">
+      <location width="1"/>
+      <labl>
+        ISSUES: Federal Spending- Space/Science/Technology
+      </labl>
+      <valrng>
+        <range min="1" max="8"/>
+      </valrng>
+      <invalrng>
+        <item VALUE="9"/>
+      </invalrng>
+      <sumStat type="vald">
+        19994
+      </sumStat>
+      <sumStat type="invd">
+        35680
+      </sumStat>
+      <catgry>
+        <catValu>
+          1
+        </catValu>
+        <labl>
+          1. Increased
+        </labl>
+        <catStat type="freq">
+          8128
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          2
+        </catValu>
+        <labl>
+          2. Same
+        </labl>
+        <catStat type="freq">
+          8225
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          3
+        </catValu>
+        <labl>
+          3. Decreased
+        </labl>
+        <catStat type="freq">
+          3141
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          7
+        </catValu>
+        <labl>
+          7. Cut out entirely (volunteered)
+        </labl>
+        <catStat type="freq">
+          7
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          8
+        </catValu>
+        <labl>
+          8. DK
+        </labl>
+        <catStat type="freq">
+          493
+        </catStat>
+      </catgry>
+      <catgry missing="Y">
+        <catValu>
+          9
+        </catValu>
+        <labl>
+          9. NA; no Post IW; abbrev. telephone IW (1984)
+        </labl>
+        <catStat type="freq">
+          392
+        </catStat>
+      </catgry>
+      <catgry missing="Y">
+        <catValu>
+          Sysmiss
+        </catValu>
+        <catStat type="freq">
+          35288
+        </catStat>
+      </catgry>
+      <varFormat type="numeric" schema="other"/>
+    </var>
+    <var ID="V43" name="VERSION" files="F1" intrvl="discrete">
+      <location width="28"/>
+      <labl>
+        STUDY VARIABLE: Version Number Of Release
+      </labl>
+      <sumStat type="vald">
+        55674
+      </sumStat>
+      <sumStat type="invd">
+        0
+      </sumStat>
+      <catgry>
+        <catValu>
+          ANES_cdf-VERSION:2015-May-14
+        </catValu>
+        <catStat type="freq">
+          49760
+        </catStat>
+      </catgry>
+      <catgry>
+        <catValu>
+          ANES_cdf_VERSION:2015-May-14
+        </catValu>
+        <catStat type="freq">
+          5914
+        </catStat>
+      </catgry>
+      <varFormat type="character" schema="other"/>
+    </var>
+  </dataDscr>
+</codeBook>

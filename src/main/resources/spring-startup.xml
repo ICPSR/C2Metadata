@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:jee="http://www.springframework.org/schema/jee" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:camel="http://camel.apache.org/schema/spring"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/mvc 
+        http://www.springframework.org/schema/mvc/spring-mvc.xsd
+        http://www.springframework.org/schema/aop
+        http://www.springframework.org/schema/aop/spring-aop.xsd
+        http://www.springframework.org/schema/tx 
+        http://www.springframework.org/schema/tx/spring-tx.xsd
+        http://camel.apache.org/schema/spring 
+        http://camel.apache.org/schema/spring/camel-spring.xsd
+        ">
+
+	<context:property-placeholder location="classpath:config.properties" />
+	<context:component-scan base-package="edu.umich.icpsr" />
+	<mvc:annotation-driven />
+	<mvc:default-servlet-handler />
+	<!--CAMEL Context scan -->
+	<camelContext id="camelContext" xmlns="http://camel.apache.org/schema/spring">
+		<contextScan />
+	</camelContext>
+	<!-- REST -->
+	<bean
+		class="org.springframework.web.servlet.view.ContentNegotiatingViewResolver">
+		<property name="order" value="1" />
+		<property name="contentNegotiationManager">
+			<bean class="org.springframework.web.accept.ContentNegotiationManager">
+				<constructor-arg>
+					<bean
+						class="org.springframework.web.accept.PathExtensionContentNegotiationStrategy">
+						<constructor-arg>
+							<map>
+								<entry key="json" value="application/json" />
+							</map>
+						</constructor-arg>
+					</bean>
+				</constructor-arg>
+			</bean>
+		</property>
+		<property name="defaultViews">
+			<list>
+				<!-- JSON View -->
+				<bean
+					class="org.springframework.web.servlet.view.json.MappingJackson2JsonView" />
+			</list>
+		</property>
+	</bean>
+	<bean
+		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="viewClass"
+			value="org.springframework.web.servlet.view.JstlView" />
+		<property name="prefix" value="/WEB-INF/content/" />
+		<property name="suffix" value=".jsp" />
+	</bean>
+	<mvc:resources mapping="/resources/**" location="/resources/" /> <!-- excluded from interceptors; i.e., static -->
+	<bean id="multipartResolver"
+		class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<property name="maxUploadSize" value="100000000" /> <!-- formerly 100000 -->
+	</bean>
+	<import resource="classpath:spring-ds-archonnex.xml" />
+	<import resource="classpath:spring-activiti.xml" />
+	<tx:annotation-driven transaction-manager="transactionManager" />
+    <bean class="org.apache.activemq.ActiveMQConnectionFactory" id="jmsConnectionFactory">
+        <property name="brokerURL" value="${activemq.url}"/>
+        <property name="userName" value="${activemq.user}"/>
+        <property name="password" value="${activemq.password}"/>
+    </bean>
+    <bean class="org.apache.activemq.pool.PooledConnectionFactory"
+        destroy-method="stop" id="pooledConnectionFactory" init-method="start">
+        <property name="maxConnections" value="10"/>
+        <property name="connectionFactory" ref="jmsConnectionFactory"/>
+    </bean>
+    <bean class="org.apache.camel.component.jms.JmsConfiguration" id="jmsConfig">
+        <property name="connectionFactory" ref="pooledConnectionFactory"/>
+        <property name="concurrentConsumers" value="5"/>
+    </bean>
+    <!-- Encryption services -->
+    <bean class="javax.rmi.ssl.SslRMIClientSocketFactory" id="sslRMIClientSocketFactory"/>
+    <bean
+        class="edu.umich.icpsr.commons.crypto.CustomRmiProxyFactoryBean" id="remoteSecretKeyService">
+        <property name="registryClientSocketFactory" ref="sslRMIClientSocketFactory"/>
+        <property name="serviceUrl" value="${encryption.remote.service.url}"/>
+        <property name="serviceInterface" value="edu.umich.icpsr.commons.crypto.RemoteSecretKeyService"/>
+        <property name="refreshStubOnConnectFailure" value="true"/>
+    </bean>
+    <bean class="org.apache.activemq.camel.component.ActiveMQComponent" id="activemq">
+        <property name="configuration" ref="jmsConfig"/>
+    </bean>
+    <bean class="edu.umich.icpsr.commons.dao.FusekiDAO" id="fusekiDAO">
+        <property name="fusekiDataSetUrl" value="${fuseki.dataset.url}"/>
+        <property name="fusekiDataSetUser" value="${fuseki.dataset.user}"/>
+        <property name="fusekiDataSetPassword" value="${fuseki.dataset.password}"/>
+    </bean>
+    <bean class="edu.umich.icpsr.commons.dao.FedoraDAO" id="fedoraDAO">
+        <property name="fedoraUrl" value="${fedora.url}"/>
+        <property name="userName" value="${fedora.user}"/>
+        <property name="password" value="${fedora.password}"/>
+    </bean>
+    <bean class="edu.umich.icpsr.commons.security.SecurityService" id="securityService">
+        <property name="jwtSharedSecret" value="${jwt.shared.secret:fght56VG12Kl}"/>
+    </bean>
+    <bean class="edu.umich.icpsr.commons.dao.RdfResourceIndexerDAO" id="rdfResourceIndexerDAO">
+        <property name="fedoraUrl" value="${fedora.url}"/>
+        <property name="fedoraUser" value="${fedora.user}"/>
+        <property name="fedoraPassword" value="${fedora.password}"/>
+    </bean>
+    <bean class="edu.umich.icpsr.commons.dao.TripleIndexerDAO" id="tripleIndexerDAO">
+        <property name="jdbcTemplate" ref="archonnexJdbcTemplate"/>
+        <property name="fedoraUrl" value="${fedora.url}"/>
+        <property name="fedoraUserName" value="${fedora.user}"/>
+        <property name="fedoraPassword" value="${fedora.password}"/>
+        <property name="fusekiDataSetUrl" value="${fuseki.dataset.url}"/>
+        <property name="fusekiDataSetUser" value="${fuseki.dataset.user}"/>
+        <property name="fusekiDataSetPassword" value="${fuseki.dataset.password}"/>
+    </bean>
+    <bean class="edu.umich.icpsr.commons.camel.EventLogger" id="eventLogger">
+        <property name="jdbcTemplate" ref="archonnexJdbcTemplate"/>
+    </bean>
+    <bean class="edu.umich.icpsr.commons.service.ContentProcessor" id="contentProcessor"/>
+    <bean class="org.springframework.mail.javamail.JavaMailSenderImpl" id="mailSender">
+        <property name="host" value="smtp.icpsr.umich.edu"/>
+    </bean>
+    <bean class="edu.umich.icpsr.commons.service.EmailService" id="emailService"/>
+	<bean id="activitiService" class="edu.umich.icpsr.commons.service.ActivitiService"></bean>
+
+	
+    <bean class="org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer" id="freemarkerConfig">
+       <property name="templateLoaderPath" value="${freemarker.template.url}"/>
+    </bean>
+    <bean
+        class="org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer" id="freemarkerConfigLocal">
+        <property name="postTemplateLoaders">
+            <list>
+                <bean class="edu.umich.icpsr.commons.web.freemarker.LocalTemplateLoader"/>
+            </list>
+        </property>
+        <property name="freemarkerSettings">
+            <props>
+                <prop key="template_exception_handler">rethrow</prop>
+            </props>
+        </property>
+    </bean>
+
+	<!--  project-specific beans -->
+	<bean id="pseudocodeServiceImpl" class="edu.umich.icpsr.c2metadata.service.PseudocodeServiceImpl" />
+	<bean id="codebookBuilder" class="edu.umich.icpsr.c2metadata.util.CodebookBuilder" />
+	<bean id="jobService" class="edu.umich.icpsr.c2metadata.service.JobService" />
+	<bean id="c2metadataService" class="edu.umich.icpsr.c2metadata.service.C2MetadataService" />
+</beans>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<codeBook xmlns="ddi:codebook:2_5" version="2.5" ID="Temp13" xml-lang="en">
+   <docDscr>
+      <citation>
+         <titlStmt>
+            <titl>Temp#13</titl>
+         </titlStmt>
+         <prodStmt>
+            <prodDate date="2017-08-30">2017-08-30</prodDate>
+            <software version="4.0.9" date="2013-04-23">Nesstar Publisher</software>
+         </prodStmt>
+         <distStmt>
+            <depositr/>
+         </distStmt>
+      </citation>
+      <docSrc>
+         <titlStmt>
+            <titl>Temp#13</titl>
+         </titlStmt>
+         <distStmt>
+            <depositr/>
+         </distStmt>
+      </docSrc>
+   </docDscr>
+   <stdyDscr>
+      <citation>
+         <titlStmt>
+            <titl>Temp#13</titl>
+            <IDNo>Temp13</IDNo>
+         </titlStmt>
+         <prodStmt>
+            <prodDate date="2017-08-30">2017-08-30</prodDate>
+            <software version="4.0.9" date="2013-04-23">Nesstar Publisher</software>
+         </prodStmt>
+         <distStmt>
+            <depositr/>
+         </distStmt>
+      </citation>
+   </stdyDscr>
+   <fileDscr ID="F1" URI="Temp#13.~esstar?Index=0&amp;Name=da07213-inputForLog">
+      <fileTxt>
+         <fileName>da07213-inputForLog.NSDstat</fileName>
+         <dimensns>
+            <caseQnty>1899</caseQnty>
+            <varQnty>2</varQnty>
+         </dimensns>
+         <fileType>Nesstar 200801</fileType>
+      </fileTxt>
+   </fileDscr>
+   <dataDscr>
+      <var ID="V1" name="V520002" files="F1" dcml="0" intrvl="contin">
+         <location width="4"/>
+         <labl>INTERVIEW NUMBER</labl>
+         <valrng>
+            <range UNITS="REAL" min="1" max="3032"/>
+         </valrng>
+         <sumStat type="vald">1899</sumStat>
+         <sumStat type="invd">0</sumStat>
+         <sumStat type="min">1</sumStat>
+         <sumStat type="max">3032</sumStat>
+         <sumStat type="mean">1075.749</sumStat>
+         <sumStat type="stdev">649.552</sumStat>
+         <varFormat type="numeric" schema="other"/>
+      </var>
+      <var ID="V2" name="V520006" files="F1" dcml="0" intrvl="contin">
+         <location width="5"/>
+         <labl>REGION PSU AND POP SIZE</labl>
+         <valrng>
+            <range UNITS="REAL" min="1140" max="73180"/>
+         </valrng>
+         <sumStat type="vald">1899</sumStat>
+         <sumStat type="invd">0</sumStat>
+         <sumStat type="min">1140</sumStat>
+         <sumStat type="max">73180</sumStat>
+         <sumStat type="mean">33816.619</sumStat>
+         <sumStat type="stdev">19352.999</sumStat>
+         <varFormat type="numeric" schema="other"/>
+      </var>
+   </dataDscr>
+</codeBook>

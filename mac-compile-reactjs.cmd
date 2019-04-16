@@ -1,0 +1,1 @@
+babel --presets /usr/local/lib/node_modules/babel-preset-react ./src/main/jsx --watch --out-dir ./src/main/webapp/resources/scripts/app

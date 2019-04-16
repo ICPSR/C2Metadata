@@ -1,0 +1,580 @@
+{
+  "FunctionLibrary": [
+    {
+      "SDTLname": "absolute_value",
+      "Pseudocode": "Absolute value of EXP1",
+      "n_arguments": "1",
+      "parameters": [
+        {
+          "param": "EXP1",
+          "required": "YES",
+          "type": "num"
+        },
+        {
+          "param": "",
+          "required": "",
+          "type": ""
+        },
+        {
+          "param": "",
+          "required": "",
+          "type": ""
+        },
+        {
+          "param": "",
+          "required": "",
+          "type": ""
+        },
+        {
+          "param": "",
+          "required": "",
+          "type": ""
+        }
+      ]
+    },
+    {
+      "SDTLname": "addition",
+      "Pseudocode": "(EXP1 +EXP2)",
+      "n_arguments": "2",
+      "parameters": [
+        {
+          "param": "EXP1",
+          "required": "YES",
+          "type": "num"
+        },
+        {
+          "param": "EXP2",
+          "required": "YES",
+          "type": "num"
+        },
+        {
+          "param": "",
+          "required": "",
+          "type": ""
+        },
+        {
+          "param": "",
+          "required": "",
+          "type": ""
+        },
+        {
+          "param": "",
+          "required": "",
+          "type": ""
+        }
+      ]
+    },
+    {
+      "SDTLname": "coefficient_of_variation",
+      "Pseudocode": "coefficient of variation for EXP1",
+      "n_arguments": "1",
+      "parameters": [
+        {
+          "param": "EXP1",
+          "required": "YES",
+          "type": "num"
+        },
+        {
+          "param": "",
+          "required": "",
+          "type": ""
+        },
+        {
+          "param": "",
+          "required": "",
+          "type": ""
+        },
+        {
+          "param": "",
+          "required": "",
+          "type": ""
+        },
+        {
+          "param": "",
+          "required": "",
+          "type": ""
+        }
+      ]
+    },
+    {
+      "SDTLname": "cos",
+      "Pseudocode": "Cosine of EXP1",
+      "n_arguments": "1",
+      "parameters": [
+        {
+          "param": "EXP1",
+          "required": "YES",
+          "type": "num"
+        },
+        {
+          "param": "",
+          "required": "",
+          "type": ""
+        },
+        {
+          "param": "",
+          "required": "",
+          "type": ""
+        },
+        {
+          "param": "",
+          "required": "",
+          "type": ""
+        },
+        {
+          "param": "",
+          "required": "",
+          "type": ""
+        }
+      ]
+    },
+    {
+      "SDTLname": "division",
+      "Pseudocode": "(EXP1/EXP2)",
+      "n_arguments": "2",
+      "parameters": [
+        {
+          "param": "EXP1",
+          "required": "YES",
+          "type": "num"
+        },
+        {
+          "param": "EXP2",
+          "required": "YES",
+          "type": "num"
+        },
+        {
+          "param": "",
+          "required": "",
+          "type": ""
+        },
+        {
+          "param": "",
+          "required": "",
+          "type": ""
+        },
+        {
+          "param": "",
+          "required": "",
+          "type": ""
+        }
+      ]
+    },
+    {
+      "SDTLname": "dot_operator",
+      "Pseudocode": "compute only if (EXP1) valid values",
+      "n_arguments": "1",
+      "parameters": [
+        {
+          "param": "EXP1",
+          "required": "YES",
+          "type": "num"
+        },
+        {
+          "param": "",
+          "required": "",
+          "type": ""
+        },
+        {
+          "param": "",
+          "required": "",
+          "type": ""
+        },
+        {
+          "param": "",
+          "required": "",
+          "type": ""
+        },
+        {
+          "param": "",
+          "required": "",
+          "type": ""
+        }
+      ]
+    },
+    {
+      "SDTLname": "exponentiation",
+      "Pseudocode": "e raised to the power EXP1",
+      "n_arguments": "1",
+      "parameters": [
+        {
+          "param": "EXP1",
+          "required": "YES",
+          "type": "num"
+        },
+        {
+          "param": "",
+          "required": "",
+          "type": ""
+        },
+        {
+          "param": "",
+          "required": "",
+          "type": ""
+        },
+        {
+          "param": "",
+          "required": "",
+          "type": ""
+        },
+        {
+          "param": "",
+          "required": "",
+          "type": ""
+        }
+      ]
+    },
+    {
+      "SDTLname": "logarithm_base_10",
+      "Pseudocode": "base 10 log of EXP1 ",
+      "n_arguments": "1",
+      "parameters": [
+        {
+          "param": "EXP1",
+          "required": "YES",
+          "type": "num"
+        },
+        {
+          "param": "",
+          "required": "",
+          "type": ""
+        },
+        {
+          "param": "",
+          "required": "",
+          "type": ""
+        },
+        {
+          "param": "",
+          "required": "",
+          "type": ""
+        },
+        {
+          "param": "",
+          "required": "",
+          "type": ""
+        }
+      ]
+    },
+    {
+      "SDTLname": "max",
+      "Pseudocode": "the maximum value of EXP1.",
+      "n_arguments": "1",
+      "parameters": [
+        {
+          "param": "EXP1",
+          "required": "YES",
+          "type": "num"
+        },
+        {
+          "param": "",
+          "required": "",
+          "type": ""
+        },
+        {
+          "param": "",
+          "required": "",
+          "type": ""
+        },
+        {
+          "param": "",
+          "required": "",
+          "type": ""
+        },
+        {
+          "param": "",
+          "required": "",
+          "type": ""
+        }
+      ]
+    },
+    {
+      "SDTLname": "mean",
+      "Pseudocode": "Mean of EXP1",
+      "n_arguments": "1",
+      "parameters": [
+        {
+          "param": "EXP1",
+          "required": "YES",
+          "type": "num"
+        },
+        {
+          "param": "",
+          "required": "",
+          "type": ""
+        },
+        {
+          "param": "",
+          "required": "",
+          "type": ""
+        },
+        {
+          "param": "",
+          "required": "",
+          "type": ""
+        },
+        {
+          "param": "",
+          "required": "",
+          "type": ""
+        }
+      ]
+    },
+    {
+      "SDTLname": "median ",
+      "Pseudocode": "the \"within-subjects\" median of EXP1",
+      "n_arguments": "1",
+      "parameters": [
+        {
+          "param": "EXP1",
+          "required": "YES",
+          "type": "num"
+        },
+        {
+          "param": "",
+          "required": "",
+          "type": ""
+        },
+        {
+          "param": "",
+          "required": "",
+          "type": ""
+        },
+        {
+          "param": "",
+          "required": "",
+          "type": ""
+        },
+        {
+          "param": "",
+          "required": "",
+          "type": ""
+        }
+      ]
+    },
+    {
+      "SDTLname": "min",
+      "Pseudocode": "the minimum value of EXP1",
+      "n_arguments": "1",
+      "parameters": [
+        {
+          "param": "EXP1",
+          "required": "YES",
+          "type": "num"
+        },
+        {
+          "param": "",
+          "required": "",
+          "type": ""
+        },
+        {
+          "param": "",
+          "required": "",
+          "type": ""
+        },
+        {
+          "param": "",
+          "required": "",
+          "type": ""
+        },
+        {
+          "param": "",
+          "required": "",
+          "type": ""
+        }
+      ]
+    },
+    {
+      "SDTLname": "modulo",
+      "Pseudocode": "Remainder of EXP1 divided by EXP2",
+      "n_arguments": "2",
+      "parameters": [
+        {
+          "param": "EXP1",
+          "required": "YES",
+          "type": "num"
+        },
+        {
+          "param": "EXP2",
+          "required": "YES",
+          "type": "num"
+        },
+        {
+          "param": "",
+          "required": "",
+          "type": ""
+        },
+        {
+          "param": "",
+          "required": "",
+          "type": ""
+        },
+        {
+          "param": "",
+          "required": "",
+          "type": ""
+        }
+      ]
+    },
+    {
+      "SDTLname": "multiplication",
+      "Pseudocode": "(EXP1* EXP2)",
+      "n_arguments": "2",
+      "parameters": [
+        {
+          "param": "EXP1",
+          "required": "YES",
+          "type": "num"
+        },
+        {
+          "param": "EXP2",
+          "required": "YES",
+          "type": "num"
+        },
+        {
+          "param": "",
+          "required": "",
+          "type": ""
+        },
+        {
+          "param": "",
+          "required": "",
+          "type": ""
+        },
+        {
+          "param": "",
+          "required": "",
+          "type": ""
+        }
+      ]
+    },
+    {
+      "SDTLname": "natural_logarithm",
+      "Pseudocode": "natural log of EXP1",
+      "n_arguments": "1",
+      "parameters": [
+        {
+          "param": "EXP1",
+          "required": "YES",
+          "type": "num"
+        },
+        {
+          "param": "",
+          "required": "",
+          "type": ""
+        },
+        {
+          "param": "",
+          "required": "",
+          "type": ""
+        },
+        {
+          "param": "",
+          "required": "",
+          "type": ""
+        },
+        {
+          "param": "",
+          "required": "",
+          "type": ""
+        }
+      ]
+    },
+    {
+      "SDTLname": "power",
+      "Pseudocode": "EXP1 raised to the power EXP2",
+      "n_arguments": "2",
+      "parameters": [
+        {
+          "param": "EXP1",
+          "required": "YES",
+          "type": "num"
+        },
+        {
+          "param": "EXP2",
+          "required": "YES",
+          "type": "num"
+        },
+        {
+          "param": "",
+          "required": "",
+          "type": ""
+        },
+        {
+          "param": "",
+          "required": "",
+          "type": ""
+        },
+        {
+          "param": "",
+          "required": "",
+          "type": ""
+        }
+      ]
+    },
+    {
+      "SDTLname": "random_variable_uniform",
+      "Pseudocode": "random number between EXP1 and EXP2 with a uniform distribution",
+      "n_arguments": "2",
+      "parameters": [
+        {
+          "param": "EXP1",
+          "required": "YES",
+          "type": "num"
+        },
+        {
+          "param": "EXP2",
+          "required": "YES",
+          "type": "num"
+        },
+        {
+          "param": "",
+          "required": "",
+          "type": ""
+        },
+        {
+          "param": "",
+          "required": "",
+          "type": ""
+        },
+        {
+          "param": "",
+          "required": "",
+          "type": ""
+        }
+      ]
+    },
+    {
+      "SDTLname": "round",
+      "Pseudocode": "EXP1 rounded to nearest multiple of EXP2 with rounding to EXP3",
+      "n_arguments": "1..3",
+      "parameters": [
+        {
+          "param": "EXP1",
+          "required": "YES",
+          "type": "num"
+        },
+        {
+          "param": "EXP2",
+          "required": "1",
+          "type": "num"
+        },
+        {
+          "param": "EXP3",
+          "required": "NO",
+          "type": "num"
+        },
+        {
+          "param": "",
+          "required": "",
+          "type": ""
+        },
+        {
+          "param": "",
+          "required": "",
+          "type": ""
+        }
+      ]
+    }
+  ]
+}

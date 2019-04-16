@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<codeBook xmlns="ddi:codebook:2_5" version="2.5" ID="Temp13" xml-lang="en">
+   <docDscr>
+      <citation>
+         <titlStmt>
+            <titl>Temp#13</titl>
+         </titlStmt>
+         <prodStmt>
+            <prodDate date="2017-09-18">2017-09-18</prodDate>
+            <software version="4.0.9" date="2013-04-23">Nesstar Publisher</software>
+         </prodStmt>
+         <distStmt>
+            <depositr/>
+         </distStmt>
+      </citation>
+      <docSrc>
+         <titlStmt>
+            <titl>Temp#13</titl>
+         </titlStmt>
+         <distStmt>
+            <depositr/>
+         </distStmt>
+      </docSrc>
+   </docDscr>
+   <stdyDscr>
+      <citation>
+         <titlStmt>
+            <titl>Temp#13</titl>
+            <IDNo>Temp13</IDNo>
+         </titlStmt>
+         <prodStmt>
+            <prodDate date="2017-09-18">2017-09-18</prodDate>
+            <software version="4.0.9" date="2013-04-23">Nesstar Publisher</software>
+         </prodStmt>
+         <distStmt>
+            <depositr/>
+         </distStmt>
+      </citation>
+   </stdyDscr>
+   <fileDscr ID="F1" URI="Temp#13.~esstar?Index=0&amp;Name=da7568_SelectCases">
+      <fileTxt>
+         <fileName>da7568_SelectCases.sav</fileName>
+         <dimensns>
+            <caseQnty>5637</caseQnty>
+            <varQnty>8</varQnty>
+         </dimensns>
+         <fileType>Nesstar 200801</fileType>
+      </fileTxt>
+   </fileDscr>
+   <dataDscr>
+      <var ID="V1" name="CASEID" files="F1" dcml="0" intrvl="contin">
+         <location width="4"/>
+         <labl>CASE ID</labl>
+         <valrng>
+            <range UNITS="REAL" min="2" max="5313"/>
+         </valrng>
+         <sumStat type="vald">5637</sumStat>
+         <sumStat type="invd">0</sumStat>
+         <sumStat type="min">2</sumStat>
+         <sumStat type="max">5313</sumStat>
+         <sumStat type="mean">2603.296</sumStat>
+         <sumStat type="stdev">1510.508</sumStat>
+         <varFormat type="numeric" schema="other"/>
+      </var>
+      <var ID="V2" name="SEX" files="F1" dcml="0" intrvl="discrete">
+         <location width="1"/>
+         <labl>SEX</labl>
+         <valrng>
+            <range UNITS="REAL" min="1" max="1"/>
+         </valrng>
+         <sumStat type="vald">5637</sumStat>
+         <sumStat type="invd">0</sumStat>
+         <catgry>
+            <catValu>1</catValu>
+            <catStat type="freq">5637</catStat>
+         </catgry>
+         <varFormat type="numeric" schema="other"/>
+      </var>
+      <var ID="V3" name="RACE" files="F1" dcml="0" intrvl="discrete">
+         <location width="1"/>
+         <labl>RACE</labl>
+         <valrng>
+            <range UNITS="REAL" min="0" max="1"/>
+         </valrng>
+         <sumStat type="vald">5637</sumStat>
+         <sumStat type="invd">0</sumStat>
+         <catgry>
+            <catValu>0</catValu>
+            <catStat type="freq">3119</catStat>
+         </catgry>
+         <catgry>
+            <catValu>1</catValu>
+            <catStat type="freq">2518</catStat>
+         </catgry>
+         <varFormat type="numeric" schema="other"/>
+      </var>
+      <var ID="V4" name="AGE" files="F1" dcml="0" intrvl="contin">
+         <location width="2"/>
+         <labl>AGE</labl>
+         <valrng>
+            <range UNITS="REAL" min="1" max="98"/>
+         </valrng>
+         <invalrng>
+            <item UNITS="REAL" VALUE="99"/>
+         </invalrng>
+         <sumStat type="vald">5633</sumStat>
+         <sumStat type="invd">4</sumStat>
+         <sumStat type="min">1</sumStat>
+         <sumStat type="max">98</sumStat>
+         <sumStat type="mean">25.72</sumStat>
+         <sumStat type="stdev">17.858</sumStat>
+         <varFormat type="numeric" schema="other"/>
+      </var>
+      <var ID="V5" name="HEALTHDEFECT" files="F1" dcml="0" intrvl="discrete">
+         <location width="1"/>
+         <labl>HEALTH</labl>
+         <valrng>
+            <range UNITS="REAL" min="0" max="9"/>
+         </valrng>
+         <sumStat type="vald">5637</sumStat>
+         <sumStat type="invd">0</sumStat>
+         <catgry>
+            <catValu>0</catValu>
+            <catStat type="freq">5589</catStat>
+         </catgry>
+         <catgry>
+            <catValu>1</catValu>
+            <catStat type="freq">47</catStat>
+         </catgry>
+         <catgry>
+            <catValu>9</catValu>
+            <catStat type="freq">1</catStat>
+         </catgry>
+         <varFormat type="numeric" schema="other"/>
+      </var>
+      <var ID="V6" name="MARITAL" files="F1" dcml="0" intrvl="discrete">
+         <location width="1"/>
+         <labl>MARITAL STATUS</labl>
+         <valrng>
+            <range UNITS="REAL" min="0" max="3"/>
+         </valrng>
+         <invalrng>
+            <item UNITS="REAL" VALUE="4"/>
+         </invalrng>
+         <sumStat type="vald">5423</sumStat>
+         <sumStat type="invd">214</sumStat>
+         <catgry>
+            <catValu>0</catValu>
+            <catStat type="freq">3005</catStat>
+         </catgry>
+         <catgry>
+            <catValu>1</catValu>
+            <catStat type="freq">1621</catStat>
+         </catgry>
+         <catgry>
+            <catValu>2</catValu>
+            <catStat type="freq">752</catStat>
+         </catgry>
+         <catgry>
+            <catValu>3</catValu>
+            <catStat type="freq">45</catStat>
+         </catgry>
+         <catgry missing="Y">
+            <catValu>4</catValu>
+            <catStat type="freq">214</catStat>
+         </catgry>
+         <varFormat type="numeric" schema="other"/>
+      </var>
+      <var ID="V7" name="READING" files="F1" dcml="0" intrvl="discrete">
+         <location width="1"/>
+         <labl>ABILITY TO READ</labl>
+         <valrng>
+            <range UNITS="REAL" min="0" max="1"/>
+         </valrng>
+         <sumStat type="vald">5637</sumStat>
+         <sumStat type="invd">0</sumStat>
+         <catgry>
+            <catValu>0</catValu>
+            <catStat type="freq">3345</catStat>
+         </catgry>
+         <catgry>
+            <catValu>1</catValu>
+            <catStat type="freq">2292</catStat>
+         </catgry>
+         <varFormat type="numeric" schema="other"/>
+      </var>
+      <var ID="V8" name="WRITING" files="F1" dcml="0" intrvl="discrete">
+         <location width="1"/>
+         <labl>ABILITY TO WRITE</labl>
+         <valrng>
+            <range UNITS="REAL" min="0" max="1"/>
+         </valrng>
+         <sumStat type="vald">5637</sumStat>
+         <sumStat type="invd">0</sumStat>
+         <catgry>
+            <catValu>0</catValu>
+            <catStat type="freq">3171</catStat>
+         </catgry>
+         <catgry>
+            <catValu>1</catValu>
+            <catStat type="freq">2466</catStat>
+         </catgry>
+         <varFormat type="numeric" schema="other"/>
+      </var>
+   </dataDscr>
+</codeBook>

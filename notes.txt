@@ -1,0 +1,12 @@
+MTNA software involves the following JAR files, which will have different dates/versions:
+
+dataset-updater-1.0.0-20180409.205423-3.jar
+ddi-merge-utility-1.0.0-20180409.153644-1.jar
+openmetadata-model-1.0.0-20180413.184108-6.jar
+openmetadata-reader-1.0.0-20180411.132840-2.jar
+openmetadata-xml-updater-1.0.0-20180409.153845-1.jar
+sdtl-pojo-0.1.0-20180413.185433-7.jar
+
+In order to update the MTNA stuff, you'll need to delete 
+
+~/.m2/repository/us/mtna
